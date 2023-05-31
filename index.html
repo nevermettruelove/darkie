@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Darkie Bot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ad4491eefa.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    html {
+        background-color: #36393e;
+    }
+
+    .topbar {
+        background-color: #422b9b;
+        height: 6vw;
+        margin: 0 auto;
+        padding: 0;
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        color: white;
+        display: flex;
+        overflow: hidden;
+        justify-content: space-between;
+    }
+
+    h1,
+    p,
+    a {
+        font-family: 'Lexend Deca', sans-serif;
+        text-decoration: none;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    button {
+        background-color: white;
+        color: #5f42e0;
+        font-weight: 600;
+        border: none;
+        font-size: 1.5vw;
+        padding: 1vw;
+        width: 10vw;
+        height: 4vw;
+        border-radius: 1.5vw;
+        transition: 0.25s;
+    }
+
+    img,
+    button {
+        margin-top: 1vw;
+        margin-left: 1vw;
+    }
+
+    button:hover {
+        background-color: #5f42e0;
+        color: white;
+    }
+
+    .content {
+        margin-top: 7.5vw;
+        display: inline-block;
+        color: white;
+        margin-left: 4.5vw;
+        margin-right: 4.5vw;
+        width: calc(100% - 9vw);
+    }
+
+    .content p {
+        color: #919191;
+        white-space: pre-line;
+        text-align: center;
+    }
+
+    @media (orientation:portrait) {
+        .topbar {
+            height: 12vw;
+        }
+
+        button {
+            height: 8vw;
+            width: 20vw;
+            font-size: 3.6vw;
+            margin-right: 3vw !important;
+            margin-top: 2vw !important;
+            border-radius: 3vw;
+        }
+
+        img {
+            margin-left: 2vw;
+            margin-top: 2vw;
+            height: 8vw !important;
+            width: 8vw !important;
+        }
+    }
+
+    .moreText {
+        background-color: #2b2d31;
+        border-radius: 4vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 0.3vw;
+        padding-bottom: 0.3vw;
+        width: fit-content;
+    }
+</style>
+
+<body>
+    <div class="topbar">
+        <img style="height: 4vw;
+        width: 4vw;"
+            src="https://media.discordapp.net/attachments/1067465793023004712/1113201861474918541/darkie_crown.png">
+        <button style="margin-right: 1.5vw;"><a
+                href="https://discord.com/api/oauth2/authorize?client_id=1055863936660025484&amp;permissions=8&amp;scope=bot%20applications.commands">Add
+                Bot</a></button>
+    </div>
+    <div class="content">
+        <h1 style="text-align: center;">Features</h1>
+        <h1><i style="margin-right: 0.5vw; display: inline-block; width: 40px; height: 40px; font-size: 40px;"
+                class="fa-solid fa-shield-halved"></i>
+            Moderation</h1>
+        <div class="moreText">
+            <p>Use commands for keeping your server safe such as ban, kick or mute.</p>
+        </div>
+        <div style="text-align: right;">
+            <h1>Welcome Messages<i style="margin-left: 1.5vw; display: inline-block; width: 40px; height: 40px; font-size: 40px;" class="fa-solid fa-right-to-bracket"></i></h1>
+            <div style="float: right;" class="moreText">
+                <p>It's great to give new members a welcome.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
