@@ -6,10 +6,60 @@
     <title>Darkie Bot</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/ad4491eefa.js" crossorigin="anonymous"></script>
 </head>
 <style>
+    @keyframes animation {
+        100% {
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes animation1 {
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    .navbaranimation, .navbaranimation1 {
+        animation-fill-mode: forwards;
+        animation-name: animation1;
+        animation-timing-function: ease;
+    }
+
+    .navbaranimation {
+        transform: translateX(100%);
+        animation-duration: 1s;
+    }
+
+    .navbaranimation1 {
+        transform: translateX(-100%);
+        animation-duration: 0.6s;
+    }
+
+    .animation1,
+    .animation2,
+    .animation3,
+    .animation4 {
+        animation-fill-mode: forwards;
+        animation-name: animation;
+        animation-duration: 0.8s;
+        animation-timing-function: ease;
+    }
+
+    .animation1,
+    .animation3 {
+        transform: translateX(-5%);
+    }
+
+    .animation2,
+    .animation4 {
+        transform: translateX(5%);
+    }
+
     html {
         background-color: #36393e;
     }
@@ -47,7 +97,7 @@
         border: none;
         font-size: 1.5vw;
         padding: 1vw;
-        width: 10vw;
+        width: 12vw;
         height: 4vw;
         border-radius: 1.5vw;
         transition: 0.25s;
@@ -86,7 +136,7 @@
 
         button {
             height: 8vw;
-            width: 20vw;
+            width: 24vw;
             font-size: 3.6vw;
             margin-right: 3vw !important;
             margin-top: 2vw !important;
@@ -110,29 +160,76 @@
         padding-bottom: 0.3vw;
         width: fit-content;
     }
+
+    *::-webkit-scrollbar {
+        width: 11px;
+        background: transparent;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: #2c3033;
+        border-radius: 10px;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: rgb(17, 17, 19);
+        border-radius: 10px;
+        background-clip: content-box;
+        border: 2px solid transparent;
+    }
 </style>
 
 <body>
     <div class="topbar">
-        <img style="height: 4vw;
+        <img class="navbaranimation1" style="height: 4vw;
         width: 4vw;"
             src="https://media.discordapp.net/attachments/1067465793023004712/1113201861474918541/darkie_crown.png">
-        <button style="margin-right: 1.5vw;"><a
-                href="https://discord.com/api/oauth2/authorize?client_id=1055863936660025484&amp;permissions=8&amp;scope=bot%20applications.commands">Add
-                Bot</a></button>
+        <div class="navbaranimation">
+            <button onclick="location.href='https://nevermettruelove.github.io/darkie/commands';"
+                style="margin-right: 1.5vw; cursor: pointer;"><a>Commands</a></button>
+            <button
+                onclick="location.href='https://discord.com/api/oauth2/authorize?client_id=1055863936660025484&amp;permissions=8&amp;scope=bot%20applications.commands';"
+                style="margin-right: 1.5vw; cursor: pointer;"><a>Add
+                    Bot</a></button>
+        </div>
     </div>
     <div class="content">
         <h1 style="text-align: center;">Features</h1>
-        <h1><i style="margin-right: 0.5vw; display: inline-block; width: 40px; height: 40px; font-size: 40px;"
-                class="fa-solid fa-shield-halved"></i>
-            Moderation</h1>
-        <div class="moreText">
-            <p>Use commands for keeping your server safe such as ban, kick or mute.</p>
+        <div class="animation1">
+            <h1><i style="margin-right: 0.5vw; display: inline-block; width: 40px; height: 40px; font-size: 40px;"
+                    class="fa-solid fa-shield-halved"></i>
+                Moderation</h1>
+            <div class="moreText">
+                <p>Moderate your server easily by using moderation commands.</p>
+            </div>
         </div>
-        <div style="text-align: right;">
-            <h1>Welcome Messages<i style="margin-left: 1.5vw; display: inline-block; width: 40px; height: 40px; font-size: 40px;" class="fa-solid fa-right-to-bracket"></i></h1>
+        <div class="animation2">
+            <div style="text-align: right;">
+                <h1>Welcome Messages<i
+                        style="margin-left: 1.5vw; display: inline-block; width: 40px; height: 40px; font-size: 40px;"
+                        class="fa-solid fa-right-to-bracket"></i></h1>
+            </div>
             <div style="float: right;" class="moreText">
                 <p>It's great to give new members a welcome.</p>
+            </div>
+        </div>
+        <span style="height: 60px; display: block; filter: opacity(0%);"></span>
+        <div class="animation3">
+            <h1><i style="margin-right: 0.5vw; display: inline-block; width: 40px; height: 40px; font-size: 40px;"
+                    class="fa-solid fa-face-smile-beam"></i>
+                4Fun</h1>
+            <div class="moreText">
+                <p>Commands to use for fun & more!</p>
+            </div>
+        </div>
+        <div class="animation4">
+            <div style="text-align: right;">
+                <h1>Anti-Invite<i
+                        style="margin-left: 1.5vw; display: inline-block; width: 40px; height: 40px; font-size: 40px;"
+                        class="fa-solid fa-circle-xmark"></i></h1>
+            </div>
+            <div style="float: right;" class="moreText">
+                <p>Prevent unwanted members from joining your server.</p>
             </div>
         </div>
     </div>
