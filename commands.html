@@ -11,9 +11,8 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/ad4491eefa.js" crossorigin="anonymous"></script>
     <meta name="author" content="Darkie Bot" />
-      <link rel="icon" 
-     type="image/png" 
-     href="https://cdn.discordapp.com/attachments/1067465793023004712/1113201861474918541/darkie_crown.png">
+    <link rel="icon" type="image/png"
+        href="https://cdn.discordapp.com/attachments/1067465793023004712/1113201861474918541/darkie_crown.png">
     <meta name="description" content="Page with all commands that Darkie Bot supports" />
 </head>
 <style>
@@ -71,6 +70,7 @@
     }
 
     h1,
+    h2,
     h3,
     p,
     a {
@@ -109,6 +109,28 @@
     button:hover {
         background-color: #5f42e0;
         color: white;
+    }
+
+    @keyframes animation2 {
+        0% {
+            filter: opacity(0%);
+        }
+
+        100% {
+            filter: opacity(100%);
+        }
+    }
+
+    @keyframes animation3 {
+        0% {
+            transform: translateY(-45%);
+            filter: opacity(0%);
+        }
+
+        100% {
+            transform: translateY(0%);
+            filter: opacity(100%);
+        }
     }
 
     .content {
@@ -156,6 +178,19 @@
         padding-top: 0.3vw;
         padding-bottom: 0.3vw;
         width: fit-content;
+        animation: 1.1s ease 1 animation2;
+    }
+
+    .commandslisttitle {
+        animation: 0.9s ease 1 animation3;
+    }
+
+    .commandcategorylist {
+        background: rgba(0, 0, 0, 0.08);
+        border-radius: 3vw;
+        padding: 3px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     *::-webkit-scrollbar {
@@ -183,46 +218,110 @@
                 onclick="location.href='https://discord.com/api/oauth2/authorize?client_id=1055863936660025484&amp;permissions=8&amp;scope=bot%20applications.commands';"
                 style="margin-right: 1.5vw; cursor: pointer;"><a>Add
                     Bot</a></button>
-            <button
-                onclick="location.href='https://discord.gg/ZAYVXtm5NH';"
+            <button onclick="location.href='https://discord.gg/ZAYVXtm5NH';"
                 style="margin-right: 1.5vw; cursor: pointer;"><a>Support</a></button>
         </div>
     </div>
     <center>
         <div class="content">
-            <h1>Commands</h1>
+            <h1 class="commandslisttitle">Commands</h1>
             <div class="moreText">
+                <h3>Moderation Commands</h3>
+                <div class="commandcategorylist">
+                    <p class="command">/ban &lt;<span class="variable">user</span>&gt; &lt;<span
+                            class="variable">reason</span>&gt;</p>
+                    <p>Bans user.</p>
+                    <p class="command">/kick &lt;<span class="variable">user</span>&gt; &lt;<span
+                            class="variable">reason</span>&gt;</p>
+                    <p>Kicks user.</p>
+                    <p class="command">/banlist</p>
+                    <p>Shows list of banned users.</p>
+                    <p class="command">/mute &lt;<span class="variable">user</span>&gt; &lt;<span
+                            class="variable">time</span>&gt; &lt;<span class="variable">reason</span>&gt;</p>
+                    <p>Mutes user.</p>
+                    <p class="command">/unmute &lt;<span class="variable">user</span>&gt;</p>
+                    <p>Unmutes user.</p>
+                    <p class="command">/warn &lt;<span class="variable">user</span>&gt; &lt;<span
+                            class="variable">reason</span>&gt;</p>
+                    <p>Warns user.</p>
+                </div>
+                <h3>4Fun Commands</h3>
+                <div class="commandcategorylist">
+                    <p class="command">/kiss &lt;<span class="variable">user</span>&gt;</p>
+                    <p>Sends kissing gif.</p>
+                    <p class="command">/punch &lt;<span class="variable">user</span>&gt;</p>
+                    <p>Sends punch gif.</p>
+                    <p class="command">/hug &lt;<span class="variable">user</span>&gt;</p>
+                    <p>Sends hugging gif.</p>
+                    <p class="command">/slap &lt;<span class="variable">user</span>&gt;</p>
+                    <p>Sends slapping gif.</p>
+                    <p class="command">/tickle &lt;<span class="variable">user</span>&gt;</p>
+                    <p>Sends tickling gif.</p>
+                    <p class="command">/stare &lt;<span class="variable">user</span>&gt;</p>
+                    <p>Sends stare gif.</p>
+                    <p class="command">/happy &lt;<span class="variable">user</span>&gt;</p>
+                    <p>Sends happy gif.</p>
+                    <p class="command">/sad &lt;<span class="variable">user</span>&gt;</p>
+                    <p>Sends sad gif.</p>
+                    <p class="command">/cheers &lt;<span class="variable">user</span>&gt;</p>
+                    <p>Sends cheers gif.</p>
+                    <p class="command">/bite &lt;<span class="variable">user</span>&gt;</p>
+                    <p>Sends bite gif.</p>
+                    <p class="command">/pat &lt;<span class="variable">user</span>&gt;</p>
+                    <p>Sends patting gif.</p>
+                    <p class="command">/roll &lt;<span class="variable">user</span>&gt;</p>
+                    <p>Sends rolling gif.</p>
+                </div>
+                <h3>Information Commands</h3>
+                <div class="commandcategorylist">
+                    <p class="command">/server</p>
+                    <p>Sends server information.</p>
+                    <p class="command">/avatar &lt;<span class="variable">user</span>&gt;</p>
+                    <p>Sends user's avatar.</p>
+                    <p class="command">/help</p>
+                    <p>Sends help message.</p>
+                    <p class="command">/ping</p>
+                    <p>Sends current bot's ping.</p>
+                    <p class="command">/user &lt;<span class="variable">user</span>&gt;</p>
+                    <p>Sends user information.</p>
+                </div>
                 <h3>Welcome Message Commands</h3>
-                <p class="command">/set welcome message &lt;<span class="variable">channel</span>&gt; &lt;<span
-                        class="variable">message</span>&gt; &lt;<span class="variable">embed</span>&gt;</p>
-                <p>Sets welcome message.</p>
-                <p class="command">/set welcome embed &lt;<span class="variable">title</span>&gt; &lt;<span
-                        class="variable">color</span>&gt;</p>
-                <p>Sets welcome embed.</p>
-                <p class="command">/set leave message &lt;<span class="variable">channel</span>&gt; &lt;<span
-                        class="variable">message</span>&gt; &lt;<span class="variable">embed</span>&gt;</p>
-                <p>Sets leave message.</p>
-                <p class="command">/set leave embed &lt;<span class="variable">title</span>&gt; &lt;<span
-                        class="variable">color</span>&gt;</p>
-                <p>Sets leave embed.</p>
+                <div class="commandcategorylist">
+                    <p class="command">/set welcome message &lt;<span class="variable">channel</span>&gt; &lt;<span
+                            class="variable">message</span>&gt; &lt;<span class="variable">embed</span>&gt;</p>
+                    <p>Sets welcome message.</p>
+                    <p class="command">/set welcome embed &lt;<span class="variable">title</span>&gt; &lt;<span
+                            class="variable">color</span>&gt;</p>
+                    <p>Sets welcome embed.</p>
+                    <p class="command">/set leave message &lt;<span class="variable">channel</span>&gt; &lt;<span
+                            class="variable">message</span>&gt; &lt;<span class="variable">embed</span>&gt;</p>
+                    <p>Sets leave message.</p>
+                    <p class="command">/set leave embed &lt;<span class="variable">title</span>&gt; &lt;<span
+                            class="variable">color</span>&gt;</p>
+                    <p>Sets leave embed.</p>
+                </div>
                 <h3>Verification System Commands</h3>
-                <p class="command">/setmod verify create &lt;<span class="variable">message</span>&gt; &lt;<span
-                        class="variable">role</span>&gt; &lt;<span class="variable">channel</span>&gt; &lt;<span
-                        class="variable">embed</span>&gt;</p>
-                <p>Creates verification system.</p>
-                <p class="command">/setmod verify remove</p>
-                <p>Removes verification system.</p>
-                <p class="command">/setmod verify embed &lt;<span class="variable">title</span>&gt; &lt;<span
-                        class="variable">text</span>&gt; &lt;<span class="variable">color</span>&gt; &lt;<span
-                        class="variable">message_id</span>&gt; &lt;<span class="variable">icon</span>&gt;</p>
-                <p>Edits verification system embed.</p>
+                <div class="commandcategorylist">
+                    <p class="command">/setmod verify create &lt;<span class="variable">message</span>&gt; &lt;<span
+                            class="variable">role</span>&gt; &lt;<span class="variable">channel</span>&gt; &lt;<span
+                            class="variable">embed</span>&gt;</p>
+                    <p>Creates verification system.</p>
+                    <p class="command">/setmod verify remove</p>
+                    <p>Removes verification system.</p>
+                    <p class="command">/setmod verify embed &lt;<span class="variable">title</span>&gt; &lt;<span
+                            class="variable">text</span>&gt; &lt;<span class="variable">color</span>&gt; &lt;<span
+                            class="variable">message_id</span>&gt; &lt;<span class="variable">icon</span>&gt;</p>
+                    <p>Edits verification system embed.</p>
+                </div>
                 <h3>Autorole Commands</h3>
-                <p class="command">/set autorole add &lt;<span class="variable">role</span>&gt;</p>
-                <p>Adds role to autorole.</p>
-                <p class="command">/set autorole remove &lt;<span class="variable">role</span>&gt;</p>
-                <p>Removes role from autorole.</p>
+                <div class="commandcategorylist">
+                    <p class="command">/set autorole add &lt;<span class="variable">role</span>&gt;</p>
+                    <p>Adds role to autorole.</p>
+                    <p class="command">/set autorole remove &lt;<span class="variable">role</span>&gt;</p>
+                    <p>Removes role from autorole.</p>
+                </div>
+                <br>
             </div>
-        </div>
     </center>
 </body>
 
