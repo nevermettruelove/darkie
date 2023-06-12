@@ -15,6 +15,9 @@
         href="https://cdn.discordapp.com/attachments/1067465793023004712/1113201861474918541/darkie_crown.png">
     <meta name="description"
         content="Discord bot that adds things such as moderating, anti-invite, 4fun, welcome messages & more!" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="selectmenu.css" type="text/css">
+    <script type="text/javascript" src="selectmenu.js"></script>
 </head>
 <style>
     @keyframes animation {
@@ -110,13 +113,14 @@
     a {
         font-family: 'Lexend Deca', sans-serif;
         text-decoration: none;
+        color: white;
     }
 
     a {
         color: inherit;
     }
 
-    button {
+    .button {
         background-color: white;
         color: #5f42e0;
         font-weight: 600;
@@ -130,12 +134,12 @@
     }
 
     img,
-    button {
+    .button {
         margin-top: 1vw;
         margin-left: 1vw;
     }
 
-    button:hover {
+    .button:hover {
         background-color: #5f42e0;
         color: white;
     }
@@ -160,7 +164,7 @@
             height: 12vw;
         }
 
-        button {
+        .button {
             height: 8vw;
             width: 24vw;
             font-size: 3.6vw;
@@ -206,13 +210,13 @@
         width: 4vw;"
             src="https://media.discordapp.net/attachments/1067465793023004712/1113201861474918541/darkie_crown.png">
         <div class="navbaranimation">
-            <button onclick="location.href='https://nevermettruelove.github.io/darkie/commands';"
+            <button class="button" onclick="location.href='https://nevermettruelove.github.io/darkie/commands';"
                 style="margin-right: 1.5vw; cursor: pointer;"><a>Commands</a></button>
-            <button
+            <button class="button"
                 onclick="location.href='https://discord.com/api/oauth2/authorize?client_id=1055863936660025484&amp;permissions=8&amp;scope=bot%20applications.commands';"
                 style="margin-right: 1.5vw; cursor: pointer;"><a>Add
                     Bot</a></button>
-            <button onclick="location.href='https://discord.gg/ZAYVXtm5NH';"
+            <button class="button" onclick="location.href='https://discord.gg/ZAYVXtm5NH';"
                 style="margin-right: 1.5vw; cursor: pointer;"><a>Support</a></button>
         </div>
     </div>
@@ -256,6 +260,28 @@
             </div>
         </div>
     </div>
+    <center>
+        <button type="button" id="btnMenu">Select Command</button>
+    </center>
 </body>
+<script>
+    let commandtype  = "none";
+    $('#btnMenu').click(function () {
+        $(this).selectMenu({
+            regular: true,
+            data: menuData
+        });
+    });
+    var menuData = [
+    {content:'Welcome Message',callback : function(){
+        commandtype = "welcomemessage";
+        console.log(commandtype);
+    }},
+    {content:'Leave Message',callback : function(){
+        commandtype = "leavemessage";
+        console.log(commandtype);
+    }}
+    ];
+</script>
 
 </html>
