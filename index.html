@@ -181,6 +181,7 @@
     .button {
         margin-top: 1vw;
         margin-left: 1vw;
+        outline: none;
     }
 
     .button:hover {
@@ -264,6 +265,16 @@
         display: none;
     }
 
+    #leavegen {
+        margin-top: 8px;
+        background: rgb(238, 63, 63);
+        width: 280px;
+        height: 180px;
+        border-radius: 4px;
+        overflow: hidden;
+        display: none;
+    }
+
     #editable-area1 {
         margin-top: 0;
         margin-left: auto;
@@ -287,6 +298,31 @@
         padding-bottom: 0.8vh;
         padding-left: 0.8vw;
         padding-right: 0.8vw;
+        background-color: white;
+        color: #5f42e0;
+        transition: 0.3s;
+        outline: none;
+    }
+
+    input:hover {
+        color: white;
+        background-color: #5f42e0;
+    }
+
+    .copy {
+        background-color: white;
+        color: #5f42e0;
+        border-radius: 8px;
+        border: none;
+        width: 30px;
+        height: 30px;
+        transition: 0.18s;
+        cursor: pointer;
+    }
+
+    .copy:hover {
+        color: white;
+        background-color: #5f42e0;
     }
 </style>
 
@@ -349,9 +385,15 @@
     <center>
         <h1>Command Generator</h1>
         <button type="button" id="btnMenu">Select Command</button><br>
-        <input type="text" style="color: gray; width: 450px; margin-top: 8px;" value="Input for message code"
-            id="Input1"><br>
-        <input type="text" style="color: gray; width: 450px; margin-top: 8px;" value="Input for embed code" id="Input2">
+        <input spellcheck="false" type="text"
+            style="font-family: 'Lexend Deca', sans-serif; width: 450px; margin-top: 8px;"
+            value="Output for message code" id="Input1">
+        <button class="copy" onclick="copyText()"><i class="fa-solid fa-paste"></i></button>
+        <br>
+        <input spellcheck="false" type="text"
+            style="font-family: 'Lexend Deca', sans-serif; width: 450px; margin-top: 8px;" value="Output for embed code"
+            id="Input2">
+        <button class="copy" onclick="copyText1()"><i class="fa-solid fa-paste"></i></button>
         <br>
         <div onclick="getcommand();" id="btn2">Generate Command<a style="font-size: 13px;">(s)</a></div>
         <div id="welcomegen">
@@ -380,6 +422,32 @@
                 <br>
             </div>
         </div>
+        <div id="leavegen">
+            <div id="editable-area1">
+                <div style="display: flex; justify-content: space-between;" id="profilearea">
+                    <div
+                        style="width: 170px; display: inline; margin-left: 10px; margin-top: 12px; border-radius: 24px; background-color: white; height: 24px; width: 24px;">
+                    </div>
+                    <p
+                        style="margin-top: 15px; display: inline; margin-right: 165px; text-align: right; font-size: 13px; font-weight: 600;">
+                        user#0001</p>
+                </div>
+                <div class="welcomemessagecontentembed">
+                    <textarea id="textarea11" spellcheck="false" wrap="off"
+                        style="float: left; resize: none; overflow: hidden; border: none; font-weight: 600; margin-left: 10px; font-size: 16px; color: white; font-family: 'Lexend Deca', sans-serif; background: rgba(31, 245, 35, 0.15); border-radius: 4px;"
+                        rows="1" cols="24">Member left...</textarea>
+                </div>
+                <div class="welcomemessagecontentmessageembed">
+                    <textarea id="textarea22" spellcheck="false" wrap="off"
+                        style="float: left; resize: none; overflow: hidden; border: none; font-weight: 200; margin-left: 10px; font-size: 14px; color: white; font-family: 'Lexend Deca', sans-serif; background: rgba(31, 245, 35, 0.15); border-radius: 4px;"
+                        rows="3" cols="32">Hope they will be back soon!</textarea>
+                </div>
+                <p style="float: left; font-weight: 400; margin-left: 11px; margin-top: 0; font-size: 14px;">Total
+                    Members:<br><a style="font-weight: 200; float: left;">21</a><br><a
+                        style="font-weight: 400; float: left; font-size: 11px; margin-top: 3px;">©️ darkie v2</a></p>
+                <br>
+            </div>
+        </div>
         <div style="margin-top: 8px; border-radius: 14px;" class="moreText">
             <p style="font-weight: 400;">You can edit areas marked <a style="color: rgb(31, 245, 35);">green</a>.</p>
             <p style="font-weight: 200">{USER} is used for pinging user.<br>{TAG} is member's name and tag.<br>{SERVER}
@@ -391,7 +459,6 @@
 </body>
 <script>
     function getwelcomeembedcommand() {
-        /* title and color (this soon) */
         let color = "1FF523";
         let titletext = document.getElementById('textarea1').value;
         let embedcommand = "/set welcome embed" + " title:" + titletext + " color:" + color;
@@ -405,8 +472,7 @@
         document.getElementById('Input1').value = messagecommand;
     }
     function getleaveembedcommand() {
-        /* title and color (this soon) */
-        let color = "1FF523";
+        let color = "EE3F3F";
         let titletext = document.getElementById('textarea11').value;
         let embedcommand = "/set leave embed" + " title:" + titletext + " color:" + color;
         document.getElementById('Input2').value = embedcommand;
@@ -421,34 +487,47 @@
     let commandtype = "none";
     var menuData = [
         {
+            content: 'Normal (WIP)', header: true
+        },
+        {content:'sm_divider'},
+        {
             content: 'Welcome Message', callback: function () {
                 commandtype = "welcomemessage";
                 document.getElementById("welcomegen").style.display = "none";
+                document.getElementById("leavegen").style.display = "none";
                 document.getElementById("btnMenu").textContent = "Welcome Message";
-            }
-        },
-        {
-            content: 'Welcome Message (embed)', callback: function () {
-                commandtype = "welcomemessageembed";
-                document.getElementById("welcomegen").style.display = "block";
-                document.getElementById("btnMenu").textContent = "Welcome Message (embed)";
             }
         },
         {
             content: 'Leave Message', callback: function () {
                 commandtype = "leavemessage";
                 document.getElementById("welcomegen").style.display = "none";
+                document.getElementById("leavegen").style.display = "none";
                 document.getElementById("btnMenu").textContent = "Leave Message";
             }
         },
+        {content:'sm_divider'},
         {
-            content: 'Leave Message (embed)', callback: function () {
-                commandtype = "leavemessageembed";
-                document.getElementById("welcomegen").style.display = "none";
-                document.getElementById("btnMenu").textContent = "Leave Message (embed)";
+            content: 'Embed', header: true
+        },
+        {content:'sm_divider'},
+        {
+            content: 'Welcome Message', callback: function () {
+                commandtype = "welcomemessageembed";
+                document.getElementById("welcomegen").style.display = "block";
+                document.getElementById("leavegen").style.display = "none";
+                document.getElementById("btnMenu").textContent = "Welcome Message (embed)";
             }
         },
-    ];
+        {
+            content: 'Leave Message', callback: function () {
+                commandtype = "leavemessageembed";
+                document.getElementById("welcomegen").style.display = "none";
+                document.getElementById("leavegen").style.display = "block";
+                document.getElementById("btnMenu").textContent = "Leave Message (embed)";
+            }
+        }
+    ]
     function getcommand() {
         if (commandtype === "welcomemessageembed") {
             getwelcomeembedcommand();
@@ -464,7 +543,19 @@
             regular: true,
             data: menuData
         });
-    }); 
+    });
+    function copyText() {
+        var text1 = document.getElementById("Input1");
+        text1.select();
+        text1.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(text1.value);
+    }
+    function copyText1() {
+        var text2 = document.getElementById("Input2");
+        text2.select();
+        text2.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(text2.value);
+    }
 </script>
 
 </html>
