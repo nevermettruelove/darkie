@@ -15,7 +15,7 @@
         href="https://cdn.discordapp.com/attachments/1067465793023004712/1113201861474918541/darkie_crown.png">
     <meta name="description"
         content="Discord bot that adds things such as moderating, anti-invite, 4fun, welcome messages & more!" />
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <link rel="stylesheet" href="selectmenu.css" type="text/css">
     <script type="text/javascript" src="selectmenu.js"></script>
 </head>
@@ -265,7 +265,7 @@
     </center>
 </body>
 <script>
-    let commandtype  = "none";
+    let commandtype = "none";
     $('#btnMenu').click(function () {
         $(this).selectMenu({
             regular: true,
@@ -273,14 +273,18 @@
         });
     });
     var menuData = [
-    {content:'Welcome Message',callback : function(){
-        commandtype = "welcomemessage";
-        console.log(commandtype);
-    }},
-    {content:'Leave Message',callback : function(){
-        commandtype = "leavemessage";
-        console.log(commandtype);
-    }}
+        {
+            content: 'Welcome Message', callback: function () {
+                commandtype = "welcomemessage";
+                console.log(commandtype);
+            }
+        },
+        {
+            content: 'Leave Message', callback: function () {
+                commandtype = "leavemessage";
+                console.log(commandtype);
+            }
+        }
     ];
 </script>
 
