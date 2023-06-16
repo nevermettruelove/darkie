@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>Darkie Bot</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,55 +13,162 @@
     <meta name="author" content="Darkie Bot" />
     <link rel="icon" type="image/png"
         href="https://cdn.discordapp.com/attachments/1067465793023004712/1113201861474918541/darkie_crown.png">
+    <meta property="og:image"
+        content="https://cdn.discordapp.com/attachments/1067465793023004712/1113201861474918541/darkie_crown.png">
     <meta name="description"
         content="Discord bot that adds things such as moderating, anti-invite, 4fun, welcome messages & more!" />
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="selectmenu.css" type="text/css">
-    <script type="text/javascript" src="selectmenu.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <style>
-    #btn2 {
-        border-radius: 7px;
-        border: transparent;
-        margin-top: 2vh;
+    p {
+        margin-top: 1em;
+    }
+
+    body {
+        background-color: #36393e;
+        overflow-x: hidden;
+        line-height: 1;
+    }
+
+    .topbar {
+        background-color: #5865F2;
+        height: 6vw;
+        margin: 0 auto;
+        padding: 0;
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        color: white;
+        display: flex;
+        overflow: hidden;
+        justify-content: space-between;
+        z-index: 10;
+    }
+
+    h1,
+    p,
+    a {
+        font-family: 'Lexend Deca', sans-serif;
+        text-decoration: none;
+        color: white;
+    }
+
+    a {
+        color: inherit;
+        cursor: pointer;
+    }
+
+    .button {
+        background-color: white;
+        color: #5f42e0;
+        font-weight: 600;
+        border: none;
+        font-size: 1.5vw;
+        padding: 1vw;
+        width: 12vw;
+        height: 4vw;
+        border-radius: 1.5vw;
+        transition: 0.25s;
+    }
+
+    img,
+    .button {
+        margin-top: 1vw;
+        margin-left: 1vw;
+        outline: none;
+    }
+
+    .generatecommandbutton {
+        font-family: 'Lexend Deca', sans-serif;
+        color: white;
+        background: #5f42e0;
+        transition: 0.25s;
+    }
+
+    .generatecommandbutton:hover {
+        color: #5f42e0;
         background: white;
-        padding: 2vh;
-        font-size: 2.5vh;
-        padding-left: 2.5vw;
-        padding-right: 2.5vw;
-        font-family: 'Lexend Deca', sans-serif;
-        width: fit-content;
-        color: #5f42e0;
-        font-weight: 400;
-        transition: 0.25s;
-        cursor: pointer;
     }
 
-    #btnMenu {
-        border-radius: 7px;
-        border: transparent;
-        margin-top: -3vh;
-        padding: 2vh;
-        font-size: 2.5vh;
-        padding-left: 2.5vw;
-        padding-right: 2.5vw;
-        font-family: 'Lexend Deca', sans-serif;
-        width: fit-content;
-        color: #5f42e0;
-        font-weight: 400;
-        transition: 0.25s;
-        cursor: pointer;
+    .generatecommandbutton:focus {
+        color: white;
+        background: #5f42e0;
     }
 
-    #btnMenu:hover {
+    .button:hover {
         background-color: #5f42e0;
         color: white;
     }
 
-    #btn2:hover {
-        background-color: #5f42e0;
+    .content {
+        margin-top: 7vw;
+        display: inline-block;
         color: white;
+        margin-left: 4.5vw;
+        margin-right: 4.5vw;
+        width: calc(100% - 9vw);
+    }
+
+    .content p {
+        color: #919191;
+        white-space: pre-line;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-weight: 700;
+        font-size: 2em;
+    }
+
+    .content {
+        line-height: inherit;
+        padding: 10px;
+    }
+
+    @media (orientation:portrait) {
+        .topbar {
+            height: 12vw;
+        }
+
+        .button {
+            height: 8vw;
+            width: 24vw;
+            font-size: 3.6vw;
+            margin-right: 3vw !important;
+            margin-top: 2vw !important;
+            border-radius: 3vw;
+        }
+
+        img {
+            margin-left: 2vw;
+            margin-top: 2vw;
+            height: 8vw !important;
+            width: 8vw !important;
+        }
+    }
+
+    *::-webkit-scrollbar {
+        width: 12px;
+        background-color: #5865F2;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: rgb(17, 17, 19);
+        border-radius: 12px;
+        background-clip: content-box;
+        border: 2px solid transparent;
+    }
+
+    .moreText {
+        background-color: #2b2d31;
+        border-radius: 4vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 0.3vw;
+        padding-bottom: 0.3vw;
+        width: fit-content;
     }
 
     @keyframes animation {
@@ -131,209 +238,15 @@
     .animation4 {
         transform: translateX(5%);
     }
-
-    html {
-        background-color: #36393e;
-    }
-
-    .topbar {
-        background-color: #5865F2;
-        height: 6vw;
-        margin: 0 auto;
-        padding: 0;
-        top: 0;
-        left: 0;
-        position: fixed;
-        width: 100%;
-        color: white;
-        display: flex;
-        overflow: hidden;
-        justify-content: space-between;
-        z-index: 10;
-    }
-
-    h1,
-    p,
-    a {
-        font-family: 'Lexend Deca', sans-serif;
-        text-decoration: none;
-        color: white;
-    }
-
-    a {
-        color: inherit;
-    }
-
-    .button {
-        background-color: white;
-        color: #5f42e0;
-        font-weight: 600;
-        border: none;
-        font-size: 1.5vw;
-        padding: 1vw;
-        width: 12vw;
-        height: 4vw;
-        border-radius: 1.5vw;
-        transition: 0.25s;
-    }
-
-    img,
-    .button {
-        margin-top: 1vw;
-        margin-left: 1vw;
-        outline: none;
-    }
-
-    .button:hover {
-        background-color: #5f42e0;
-        color: white;
-    }
-
-    .content {
-        margin-top: 10vh;
-        display: inline-block;
-        color: white;
-        margin-left: 4.5vw;
-        margin-right: 4.5vw;
-        width: calc(100% - 9vw);
-    }
-
-    .content p {
-        color: #919191;
-        white-space: pre-line;
-        text-align: center;
-    }
-
-    @media (orientation:portrait) {
-        .topbar {
-            height: 12vw;
-        }
-
-        .button {
-            height: 8vw;
-            width: 24vw;
-            font-size: 3.6vw;
-            margin-right: 3vw !important;
-            margin-top: 2vw !important;
-            border-radius: 3vw;
-        }
-
-        img {
-            margin-left: 2vw;
-            margin-top: 2vw;
-            height: 8vw !important;
-            width: 8vw !important;
-        }
-
-        #btnMenu {
-            padding: 20px;
-            padding-left: 40px;
-            padding-right: 40px;
-            font-size: 20px;
-        }
-    }
-
-    .moreText {
-        background-color: #2b2d31;
-        border-radius: 4vw;
-        padding-left: 2vw;
-        padding-right: 2vw;
-        padding-top: 0.3vw;
-        padding-bottom: 0.3vw;
-        width: fit-content;
-    }
-
-    *::-webkit-scrollbar {
-        width: 12px;
-        background-color: #5865F2;
-    }
-
-    *::-webkit-scrollbar-thumb {
-        background-color: rgb(17, 17, 19);
-        border-radius: 12px;
-        background-clip: content-box;
-        border: 2px solid transparent;
-    }
-
-    #welcomegen {
-        margin-top: 8px;
-        background: rgb(63, 238, 63);
-        width: 280px;
-        height: 180px;
-        border-radius: 4px;
-        overflow: hidden;
-        display: none;
-    }
-
-    #leavegen {
-        margin-top: 8px;
-        background: rgb(238, 63, 63);
-        width: 280px;
-        height: 180px;
-        border-radius: 4px;
-        overflow: hidden;
-        display: none;
-    }
-
-    #editable-area1 {
-        margin-top: 0;
-        margin-left: auto;
-        margin-right: 0;
-        background: #2b2d31;
-        width: 275px;
-        height: 180px;
-    }
-
-    #profilearea {
-        margin-top: 0;
-        margin-bottom: auto;
-        height: 40px;
-    }
-
-    input {
-        border: transparent;
-        border-radius: 8px;
-        font-size: 2.5vh;
-        padding-top: 0.8vh;
-        padding-bottom: 0.8vh;
-        padding-left: 0.8vw;
-        padding-right: 0.8vw;
-        background-color: white;
-        color: #5f42e0;
-        transition: 0.3s;
-        outline: none;
-    }
-
-    input:hover {
-        color: white;
-        background-color: #5f42e0;
-    }
-
-    .copy {
-        background-color: white;
-        color: #5f42e0;
-        border-radius: 8px;
-        border: none;
-        width: 30px;
-        height: 30px;
-        transition: 0.18s;
-        cursor: pointer;
-    }
-
-    .copy:hover {
-        color: white;
-        background-color: #5f42e0;
-    }
 </style>
 
 <body>
     <div class="topbar">
-        <img class="navbaranimation1" style="height: 4vw;
-        width: 4vw;"
+        <img class="navbaranimation1" style="height: 4vw;"
             src="https://media.discordapp.net/attachments/1067465793023004712/1113201861474918541/darkie_crown.png">
         <div class="navbaranimation">
-            <button class="button" onclick="location.href='https://nevermettruelove.github.io/darkie/commands';"
-                style="margin-right: 1.5vw; cursor: pointer;"><a>Commands</a></button>
+            <button class="button" onclick="location.href='https://nevermettruelove.github.io/darkie/docs';"
+                style="margin-right: 1.5vw; cursor: pointer;"><a>Docs</a></button>
             <button class="button"
                 onclick="location.href='https://discord.com/api/oauth2/authorize?client_id=1055863936660025484&amp;permissions=8&amp;scope=bot%20applications.commands';"
                 style="margin-right: 1.5vw; cursor: pointer;"><a>Add
@@ -382,180 +295,11 @@
             </div>
         </div>
     </div>
-    <center>
-        <h1>Command Generator</h1>
-        <button type="button" id="btnMenu">Select Command</button><br>
-        <input spellcheck="false" type="text"
-            style="font-family: 'Lexend Deca', sans-serif; width: 450px; margin-top: 8px;"
-            value="Output for message code" id="Input1">
-        <button class="copy" onclick="copyText()"><i class="fa-solid fa-paste"></i></button>
-        <br>
-        <input spellcheck="false" type="text"
-            style="font-family: 'Lexend Deca', sans-serif; width: 450px; margin-top: 8px;" value="Output for embed code"
-            id="Input2">
-        <button class="copy" onclick="copyText1()"><i class="fa-solid fa-paste"></i></button>
-        <br>
-        <div onclick="getcommand();" id="btn2">Generate Command<a style="font-size: 13px;">(s)</a></div>
-        <div id="welcomegen">
-            <div id="editable-area1">
-                <div style="display: flex; justify-content: space-between;" id="profilearea">
-                    <div
-                        style="width: 170px; display: inline; margin-left: 10px; margin-top: 12px; border-radius: 24px; background-color: white; height: 24px; width: 24px;">
-                    </div>
-                    <p
-                        style="margin-top: 15px; display: inline; margin-right: 165px; text-align: right; font-size: 13px; font-weight: 600;">
-                        user#0001</p>
-                </div>
-                <div class="welcomemessagecontentembed">
-                    <textarea id="textarea1" spellcheck="false" wrap="off"
-                        style="float: left; resize: none; overflow: hidden; border: none; font-weight: 600; margin-left: 10px; font-size: 16px; color: white; font-family: 'Lexend Deca', sans-serif; background: rgba(31, 245, 35, 0.15); border-radius: 4px;"
-                        rows="1" cols="24">Member joined!</textarea>
-                </div>
-                <div class="welcomemessagecontentmessageembed">
-                    <textarea id="textarea2" spellcheck="false" wrap="off"
-                        style="float: left; resize: none; overflow: hidden; border: none; font-weight: 200; margin-left: 10px; font-size: 14px; color: white; font-family: 'Lexend Deca', sans-serif; background: rgba(31, 245, 35, 0.15); border-radius: 4px;"
-                        rows="3" cols="32">Welcome {USER} to {SERVER}!{+}&#13;{+}&#13;Check #rules and #info!</textarea>
-                </div>
-                <p style="float: left; font-weight: 400; margin-left: 11px; margin-top: 0; font-size: 14px;">Total
-                    Members:<br><a style="font-weight: 200; float: left;">22</a><br><a
-                        style="font-weight: 400; float: left; font-size: 11px; margin-top: 3px;">©️ darkie v2</a></p>
-                <br>
-            </div>
-        </div>
-        <div id="leavegen">
-            <div id="editable-area1">
-                <div style="display: flex; justify-content: space-between;" id="profilearea">
-                    <div
-                        style="width: 170px; display: inline; margin-left: 10px; margin-top: 12px; border-radius: 24px; background-color: white; height: 24px; width: 24px;">
-                    </div>
-                    <p
-                        style="margin-top: 15px; display: inline; margin-right: 165px; text-align: right; font-size: 13px; font-weight: 600;">
-                        user#0001</p>
-                </div>
-                <div class="welcomemessagecontentembed">
-                    <textarea id="textarea11" spellcheck="false" wrap="off"
-                        style="float: left; resize: none; overflow: hidden; border: none; font-weight: 600; margin-left: 10px; font-size: 16px; color: white; font-family: 'Lexend Deca', sans-serif; background: rgba(31, 245, 35, 0.15); border-radius: 4px;"
-                        rows="1" cols="24">Member left...</textarea>
-                </div>
-                <div class="welcomemessagecontentmessageembed">
-                    <textarea id="textarea22" spellcheck="false" wrap="off"
-                        style="float: left; resize: none; overflow: hidden; border: none; font-weight: 200; margin-left: 10px; font-size: 14px; color: white; font-family: 'Lexend Deca', sans-serif; background: rgba(31, 245, 35, 0.15); border-radius: 4px;"
-                        rows="3" cols="32">Hope they will be back soon!</textarea>
-                </div>
-                <p style="float: left; font-weight: 400; margin-left: 11px; margin-top: 0; font-size: 14px;">Total
-                    Members:<br><a style="font-weight: 200; float: left;">21</a><br><a
-                        style="font-weight: 400; float: left; font-size: 11px; margin-top: 3px;">©️ darkie v2</a></p>
-                <br>
-            </div>
-        </div>
-        <div style="margin-top: 8px; border-radius: 14px;" class="moreText">
-            <p style="font-weight: 400;">You can edit areas marked <a style="color: rgb(31, 245, 35);">green</a>.</p>
-            <p style="font-weight: 200">{USER} is used for pinging user.<br>{TAG} is member's name and tag.<br>{SERVER}
-                is
-                current server's name.<br>{+}
-                adds new line.</p>
-        </div>
-    </center>
 </body>
-<script>
-    function getwelcomeembedcommand() {
-        let color = "1FF523";
-        let titletext = document.getElementById('textarea1').value;
-        let embedcommand = "/set welcome embed" + " title:" + titletext + " color:" + color;
-        document.getElementById('Input2').value = embedcommand;
-    }
-    function getwelcomemessagecommand() {
-        let channel = "SetThisToChannelYouWantThisMessageIn";
-        let message = document.getElementById('textarea2').value;
-        let embed = "true";
-        let messagecommand = "/set welcome message" + " channel:" + channel + " message:" + message + " embed:" + embed;
-        document.getElementById('Input1').value = messagecommand;
-    }
-    function getleaveembedcommand() {
-        let color = "EE3F3F";
-        let titletext = document.getElementById('textarea11').value;
-        let embedcommand = "/set leave embed" + " title:" + titletext + " color:" + color;
-        document.getElementById('Input2').value = embedcommand;
-    }
-    function getleavemessagecommand() {
-        let channel = "SetThisToChannelYouWantThisMessageIn";
-        let message = document.getElementById('textarea22').value;
-        let embed = "true";
-        let messagecommand = "/set leave message" + " channel:" + channel + " message:" + message + " embed:" + embed;
-        document.getElementById('Input1').value = messagecommand;
-    }
-    let commandtype = "none";
-    var menuData = [
-        {
-            content: 'Normal (WIP)', header: true
-        },
-        {content:'sm_divider'},
-        {
-            content: 'Welcome Message', callback: function () {
-                commandtype = "welcomemessage";
-                document.getElementById("welcomegen").style.display = "none";
-                document.getElementById("leavegen").style.display = "none";
-                document.getElementById("btnMenu").textContent = "Welcome Message";
-            }
-        },
-        {
-            content: 'Leave Message', callback: function () {
-                commandtype = "leavemessage";
-                document.getElementById("welcomegen").style.display = "none";
-                document.getElementById("leavegen").style.display = "none";
-                document.getElementById("btnMenu").textContent = "Leave Message";
-            }
-        },
-        {content:'sm_divider'},
-        {
-            content: 'Embed', header: true
-        },
-        {content:'sm_divider'},
-        {
-            content: 'Welcome Message', callback: function () {
-                commandtype = "welcomemessageembed";
-                document.getElementById("welcomegen").style.display = "block";
-                document.getElementById("leavegen").style.display = "none";
-                document.getElementById("btnMenu").textContent = "Welcome Message (embed)";
-            }
-        },
-        {
-            content: 'Leave Message', callback: function () {
-                commandtype = "leavemessageembed";
-                document.getElementById("welcomegen").style.display = "none";
-                document.getElementById("leavegen").style.display = "block";
-                document.getElementById("btnMenu").textContent = "Leave Message (embed)";
-            }
-        }
-    ]
-    function getcommand() {
-        if (commandtype === "welcomemessageembed") {
-            getwelcomeembedcommand();
-            getwelcomemessagecommand();
-        }
-        if (commandtype === "leavemessageembed") {
-            getleaveembedcommand();
-            getleavemessagecommand();
-        }
-    }
-    $('#btnMenu').click(function () {
-        $(this).selectMenu({
-            regular: true,
-            data: menuData
-        });
-    });
-    function copyText() {
-        var text1 = document.getElementById("Input1");
-        text1.select();
-        text1.setSelectionRange(0, 99999);
-        navigator.clipboard.writeText(text1.value);
-    }
-    function copyText1() {
-        var text2 = document.getElementById("Input2");
-        text2.select();
-        text2.setSelectionRange(0, 99999);
-        navigator.clipboard.writeText(text2.value);
-    }
-</script>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
 </html>
