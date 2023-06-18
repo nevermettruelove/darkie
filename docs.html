@@ -652,6 +652,10 @@
     const currentPage = localStorage.getItem("currentPage");
     if (currentPage === null) {
         localStorage.setItem("currentPage", "Home");
+        $("#homebutton").addClass('clicked');
+        $("#homebutton p").addClass('p-clicked');
+        $(".homecontent").css("display", "block");
+        $(".homeheadings").css("display", "block");
     }
     if (currentPage === "Home") {
         $("#homebutton").addClass('clicked');
