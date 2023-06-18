@@ -393,6 +393,23 @@
                             </div>
                         </div>
                     </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwentyThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwentyThree" aria-expanded="false" aria-controls="collapseTwentyThree">
+                                Clear
+                            </button>
+                        </h2>
+                        <div id="collapseTwentyThree" class="accordion-collapse collapse" aria-labelledby="headingTwentyThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Cleares messages from channel.
+                                <br>
+                                Syntax:
+                                <code>/clear &lt;user&gt; &lt;amount&gt; &lt;channel&gt;</code>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <br>
                 <h2>4Fun</h2>
@@ -631,12 +648,12 @@
                                 Creates verification system.
                                 <br>
                                 Syntax:
-                                <code>/setmod verify create &lt;message&gt; &lt;role&gt; &lt;channel&gt; &lt;embed&gt;</code>
+                                <code>/automod verify create &lt;message&gt; &lt;role&gt; &lt;channel&gt; &lt;embed&gt;</code>
                                 <br>
                                 To make it a embed, type <code>yes</code> in embed field.
                                 <br>
                                 Syntax:
-                                <code>/setmod verify embed &lt;title&gt; &lt;text&gt; &lt;color&gt; &lt;message_id&gt; &lt;icon&gt;</code>
+                                <code>/automod verify embed &lt;title&gt; &lt;text&gt; &lt;color&gt; &lt;message_id&gt; &lt;icon&gt;</code>
                             </div>
                         </div>
                     </div>
@@ -654,7 +671,7 @@
                                 Removes server's verification system.
                                 <br>
                                 Syntax:
-                                <code>/setmod verify remove</code>
+                                <code>/automod verify remove</code>
                             </div>
                         </div>
                     </div>
