@@ -93,7 +93,8 @@
     }
 
     .homecontent,
-    .commandcontent {
+    .commandcontent,
+    .settingscontent {
         padding: 45px;
         padding-top: 30px;
         overflow-y: auto;
@@ -103,13 +104,15 @@
     }
 
     .homecontent p,
-    .commandcontent p {
+    .commandcontent p,
+    .settingscontent p {
         color: #bdbdbd;
         font-weight: 300;
     }
 
     .homecontent li,
-    .commandcontent li {
+    .commandcontent li,
+    .settingscontent li {
         color: #bdbdbd;
         font-weight: 300;
         font-family: 'Lexend Deca', sans-serif;
@@ -180,7 +183,7 @@
 
     @media (orientation: portrait) {
         .item p {
-            font-size: 30px;
+            font-size: 22px;
             padding: 15px;
             padding-top: 3px;
             padding-bottom: 3px;
@@ -247,7 +250,7 @@
             </a>
         </div>
     </nav>
-    <div class="content">
+    <div class="content" id="content">
         <div class="leftselector" style="flex: 1; height: 100vh; background: #242424;">
             <div style="margin-top: 5px;" id="homebutton" class="item">
                 <p><i class="fa-solid fa-bars"></i><a>Home</a></p>
@@ -255,8 +258,12 @@
             <div style="margin-top: 5px;" id="commandbutton" class="item">
                 <p><i class="fa-solid fa-terminal"></i><a>Commands</a></p>
             </div>
+            <div style="margin-top: 5px;" id="settingsbutton" class="item">
+                <p><i class="fa-solid fa-gears"></i><a>Settings</a></p>
+            </div>
         </div>
-        <div class="contentfield" style="flex: 4; border-left: 1px solid #2c2c2c; height: 100vh; background: #202020;">
+        <div class="contentfield" id="contentfield"
+            style="flex: 4; border-left: 1px solid #2c2c2c; height: 100vh; background: #202020;">
             <div style="display: none;" class="homecontent">
                 <div style="background: #2c2c2c; color: white; border: 1px rgb(20, 20, 20) solid;"
                     class="alert alert-primary flexalert" role="alert">
@@ -737,6 +744,79 @@
                 <br>
                 <br>
             </div>
+            <div style="display: none;" class="settingscontent">
+                <h1>Settings</h1>
+                <p>Customize docs to your preference.</p>
+                <hr style="color: rgb(128, 128, 128);" class="hr hr-blurry" />
+                <h2>Layout</h2>
+                <div style="background: #313131; padding: 10px; width: fit-content; border-radius: 15px;">
+                    <div
+                        style="overflow: hidden; display: flex; background: #202020; height: 200px; width: 350px; border-radius: 12px;">
+                        <div style="flex: 1; background-color: #242424; border-right: 1px solid #2c2c2c;"></div>
+                        <div
+                            style="flex: 4; background-color: #202020; overflow: hidden; font-size: 8px; padding: 15px;">
+                            <div
+                                style="background-color: rgb(199, 199, 199); width: 50px; height: 10px; border-radius: 3px;">
+                            </div>
+                            <div
+                                style="background-color: rgb(87, 87, 87); margin-top: 10px; width: 120px; height: 10px; border-radius: 3px;">
+                            </div>
+                            <hr>
+                            <div
+                                style="background-color: rgb(199, 199, 199); margin-top: 10px; width: 40px; height: 9px; border-radius: 3px;">
+                            </div>
+                            <div
+                                style="background-color: rgb(87, 87, 87); margin-top: 10px; height: 10px; border-radius: 3px;">
+                            </div>
+                            <div
+                                style="background-color: rgb(87, 87, 87); margin-top: 10px; height: 10px; border-radius: 3px;">
+                            </div>
+                            <div
+                                style="background-color: rgb(87, 87, 87); margin-top: 10px; width: 70px; height: 10px; border-radius: 3px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-check" style="margin: 10px;">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            <p style="margin-bottom: 0;">Right Side</p>
+                        </label>
+                    </div>
+                    <div
+                        style="overflow: hidden; display: flex; background: #202020; height: 200px; width: 350px; border-radius: 12px;">
+                        <div
+                            style="flex: 4; background-color: #202020; overflow: hidden; font-size: 8px; padding: 15px;">
+                            <div
+                                style="background-color: rgb(199, 199, 199); width: 50px; height: 10px; border-radius: 3px;">
+                            </div>
+                            <div
+                                style="background-color: rgb(87, 87, 87); margin-top: 10px; width: 120px; height: 10px; border-radius: 3px;">
+                            </div>
+                            <hr>
+                            <div
+                                style="background-color: rgb(199, 199, 199); margin-top: 10px; width: 40px; height: 9px; border-radius: 3px;">
+                            </div>
+                            <div
+                                style="background-color: rgb(87, 87, 87); margin-top: 10px; height: 10px; border-radius: 3px;">
+                            </div>
+                            <div
+                                style="background-color: rgb(87, 87, 87); margin-top: 10px; height: 10px; border-radius: 3px;">
+                            </div>
+                            <div
+                                style="background-color: rgb(87, 87, 87); margin-top: 10px; width: 70px; height: 10px; border-radius: 3px;">
+                            </div>
+                        </div>
+                        <div style="flex: 1; background-color: #242424; border-left: 1px solid #2c2c2c;"></div>
+                    </div>
+                    <div class="form-check" style="margin: 10px; margin-bottom: 0;">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            <p style="margin-bottom: 0;">Left Side</p>
+                        </label>
+                    </div>
+                </div>
+                <br>
+            </div>
         </div>
     </div>
 </body>
@@ -749,46 +829,91 @@
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     const currentPage = localStorage.getItem("currentPage");
+    const currentLayout = localStorage.getItem("currentLayout");
+    if (currentLayout === null) {
+        localStorage.setItem("currentLayout", "rightside");
+        document.getElementById("flexRadioDefault1").checked = true;
+    }
+    if (currentLayout === "rightside") {
+        document.getElementById("flexRadioDefault1").checked = true;
+        document.getElementById("content").style.flexDirection = "row";
+        document.getElementById("contentfield").style.borderRight = "none";
+        document.getElementById("contentfield").style.borderLeft = "1px solid #2c2c2c";
+    }
+    if (currentLayout === "leftside") {
+        document.getElementById("flexRadioDefault2").checked = true;
+        document.getElementById("content").style.flexDirection = "row-reverse";
+        document.getElementById("contentfield").style.borderLeft = "none";
+        document.getElementById("contentfield").style.borderRight = "1px solid #2c2c2c";
+    }
+    $("#flexRadioDefault1").click(function () {
+        localStorage.setItem("currentLayout", "rightside");
+        document.getElementById("content").style.flexDirection = "row";
+        document.getElementById("contentfield").style.borderRight = "none";
+        document.getElementById("contentfield").style.borderLeft = "1px solid #2c2c2c";
+    });
+    $("#flexRadioDefault2").click(function () {
+        localStorage.setItem("currentLayout", "leftside");
+        document.getElementById("content").style.flexDirection = "row-reverse";
+        document.getElementById("contentfield").style.borderLeft = "none";
+        document.getElementById("contentfield").style.borderRight = "1px solid #2c2c2c";
+    });
     if (currentPage === null) {
         localStorage.setItem("currentPage", "Home");
         $("#homebutton").addClass('clicked');
         $("#homebutton p").addClass('p-clicked');
         $(".homecontent").css("display", "block");
-        $(".homeheadings").css("display", "block");
     }
     if (currentPage === "Home") {
         $("#homebutton").addClass('clicked');
         $("#homebutton p").addClass('p-clicked');
         $(".homecontent").css("display", "block");
-        $(".homeheadings").css("display", "block");
     }
     if (currentPage === "Commands") {
         $("#commandbutton").addClass('clicked');
         $("#commandbutton p").addClass('p-clicked');
         $(".commandcontent").css("display", "block");
-        $(".commandheadings").css("display", "block");
+    }
+    if (currentPage === "Settings") {
+        $("#settingsbutton").addClass('clicked');
+        $("#settingsbutton p").addClass('p-clicked');
+        $(".settingscontent").css("display", "block");
     }
     $("#homebutton").click(function () {
         localStorage.setItem("currentPage", "Home");
         $("#homebutton").addClass('clicked');
         $("#homebutton p").addClass('p-clicked');
         $(".homecontent").css("display", "block");
-        $(".homeheadings").css("display", "block");
+        $("#settingsbutton").removeClass('clicked');
+        $("#settingsbutton p").removeClass('p-clicked');
+        $(".settingscontent").css("display", "none");
         $("#commandbutton").removeClass('clicked');
         $("#commandbutton p").removeClass('p-clicked');
         $(".commandcontent").css("display", "none");
-        $(".commandheadings").css("display", "none");
     });
     $("#commandbutton").click(function () {
         localStorage.setItem("currentPage", "Commands");
         $("#commandbutton").addClass('clicked');
         $("#commandbutton p").addClass('p-clicked');
         $(".commandcontent").css("display", "block");
-        $(".commandheadings").css("display", "block");
+        $("#settingsbutton").removeClass('clicked');
+        $("#settingsbutton p").removeClass('p-clicked');
+        $(".settingscontent").css("display", "none");
         $("#homebutton").removeClass('clicked');
         $("#homebutton p").removeClass('p-clicked');
         $(".homecontent").css("display", "none");
-        $(".homeheadings").css("display", "none");
+    });
+    $("#settingsbutton").click(function () {
+        localStorage.setItem("currentPage", "Settings");
+        $("#settingsbutton").addClass('clicked');
+        $("#settingsbutton p").addClass('p-clicked');
+        $(".settingscontent").css("display", "block");
+        $("#commandbutton").removeClass('clicked');
+        $("#commandbutton p").removeClass('p-clicked');
+        $(".commandcontent").css("display", "none");
+        $("#homebutton").removeClass('clicked');
+        $("#homebutton p").removeClass('p-clicked');
+        $(".homecontent").css("display", "none");
     });
     function copy(text) {
         navigator.clipboard.writeText(text);
