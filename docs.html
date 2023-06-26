@@ -98,6 +98,7 @@
         padding: 45px;
         padding-top: 30px;
         overflow-y: auto;
+        overflow-x: hidden;
         height: 100%;
         scroll-behavior: smooth;
         animation: 0.6s contentanimation ease;
@@ -181,15 +182,6 @@
         font-family: 'Lexend Deca', sans-serif;
     }
 
-    @media (orientation: portrait) {
-        .item p {
-            font-size: 22px;
-            padding: 15px;
-            padding-top: 3px;
-            padding-bottom: 3px;
-        }
-    }
-
     hr {
         color: rgba(255, 255, 255, 0.5);
     }
@@ -236,6 +228,41 @@
         color: #87ffc7;
         text-decoration: underline dotted #4fffad;
     }
+
+    @media (orientation: portrait) {
+        .item p {
+            font-size: 14px;
+            padding: 4px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+
+        .contentfield {
+            border: none !important;
+        }
+
+        .content {
+            display: block;
+        }
+
+        .leftselector {
+            height: fit-content !important;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #2c2c2c;
+        }
+
+        .homecontent,
+        .commandcontent,
+        .settingscontent {
+            height: 75%;
+        }
+    }
+
+    .leftselector {
+        height: 100vh;
+        flex: 1;
+        background: #242424;
+    }
 </style>
 
 <body>
@@ -246,12 +273,12 @@
                     alt="" width="34" height="30" style="padding-right: 4px;" class="d-inline-block align-text-top">
                 <span class="docstext">Docs</span>
                 <span class="versionspan" style="font-size: 18px;" data-bs-toggle="tooltip"
-                    data-bs-custom-class="docversiontooltip" data-bs-title="Documentation Version">1.0</span>
+                    data-bs-custom-class="docversiontooltip" data-bs-title="Documentation Version">1.1</span>
             </a>
         </div>
     </nav>
     <div class="content" id="content">
-        <div class="leftselector" style="flex: 1; height: 100vh; background: #242424;">
+        <div class="leftselector">
             <div style="margin-top: 5px;" id="homebutton" class="item">
                 <p><i class="fa-solid fa-bars"></i><a>Home</a></p>
             </div>
@@ -738,10 +765,6 @@
                         </div>
                     </div>
                 </div>
-                <br>
-                <br>
-                <br>
-                <br>
                 <br>
             </div>
             <div style="display: none;" class="settingscontent">
