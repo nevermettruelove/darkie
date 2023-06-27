@@ -186,25 +186,6 @@
         color: rgba(255, 255, 255, 0.5);
     }
 
-    .codefield {
-        display: flex;
-        align-items: center;
-        background: rgba(0, 0, 0, 0.3);
-        padding: 12px 12px 12px 16px;
-        border-radius: 10px;
-        width: fit-content;
-    }
-
-    .codefield input {
-        padding: 0;
-        border: none;
-        background: none;
-        outline: none;
-        color: var(--bs-code-color);
-        font-size: 0.875em;
-        font-family: var(--bs-font-monospace);
-    }
-
     .copytoclipboardbutton {
         text-align: center;
         margin-left: 12px;
@@ -254,7 +235,7 @@
         .homecontent,
         .commandcontent,
         .settingscontent {
-            height: 75%;
+            height: calc(100% - (150px + 56px));
         }
     }
 
@@ -262,6 +243,49 @@
         height: 100vh;
         flex: 1;
         background: #242424;
+    }
+
+    .form-check-input:checked {
+        background-color: #4fffad;
+        border-color: #4fffad;
+        transition: 0.8s;
+    }
+
+    .form-check-input:focus {
+        border-color: #4fffad;
+        box-shadow: 0 0 0 0.25rem rgba(79, 255, 173, 0.25);
+        transition: 0.4s;
+    }
+
+    .accordion {
+        --bs-accordion-bg: #212926;
+        --bs-border-color: #49574c;
+        --bs-body-color: #a1ceb8;
+    }
+
+    .accordion-button:focus {
+        border-color: #4fffad;
+        box-shadow: 0 0 0 0.25rem rgba(79, 255, 173, 0.25);
+    }
+
+    .accordion-button:not(.collapsed) {
+        color: #4fffad;
+        background-color: #094629;
+    }
+
+    .accordion-button.collapsed::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234fffad'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+
+    .accordion-button:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234fffad'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+
+    code {
+        padding: 3px 5px 3px 5px;
+        background: #05130b;
+        border-radius: 8px;
+        color: #4fffad;
     }
 </style>
 
@@ -292,11 +316,6 @@
         <div class="contentfield" id="contentfield"
             style="flex: 4; border-left: 1px solid #2c2c2c; height: 100vh; background: #202020;">
             <div style="display: none;" class="homecontent">
-                <div style="background: #2c2c2c; color: white; border: 1px rgb(20, 20, 20) solid;"
-                    class="alert alert-primary flexalert" role="alert">
-                    <i class="fa-solid fa-circle-info"></i> This site is still being worked on. It is possible that
-                    there's not a lot of information written.
-                </div>
                 <h1>Home</h1>
                 <p>Welcome to <span style="margin-left: 0;" class="docstext">Darkie Docs</span>. Here
                     you will find information about Darkie Bot.
@@ -503,6 +522,24 @@
                             </div>
                         </div>
                     </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwentyFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwentyFour" aria-expanded="false"
+                                aria-controls="collapseTwentyFour">
+                                Suggestion Channel
+                            </button>
+                        </h2>
+                        <div id="collapseTwentyFour" class="accordion-collapse collapse"
+                            aria-labelledby="headingTwentyFour" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Sets suggestion channel.
+                                <br>
+                                Syntax:
+                                <code>/set 4fun suggestions &lt;channel&gt;</code>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <br>
                 <h2>Information</h2>
@@ -629,13 +666,18 @@
                                 <br>
                                 Syntax:
                                 <code>/set welcome message &lt;channel&gt; &lt;message&gt; &lt;embed&gt;</code>
-                                <br>
+                                <hr>
                                 To make it a embed, type <code>true</code> in embed field.
                                 <br>
                                 Color field supports only hex colors.
                                 <br>
                                 Syntax:
                                 <code>/set welcome embed &lt;title&gt; &lt;color&gt;</code>
+                                <hr>
+                                Removing welcome messages by typing remove command.
+                                <br>
+                                Syntax:
+                                <code>/remove welcome</code>
                             </div>
                         </div>
                     </div>
@@ -653,13 +695,18 @@
                                 <br>
                                 Syntax:
                                 <code>/set leave message &lt;channel&gt; &lt;message&gt; &lt;embed&gt;</code>
-                                <br>
+                                <hr>
                                 To make it a embed, type <code>true</code> in embed field.
                                 <br>
                                 Color field supports only hex colors.
                                 <br>
                                 Syntax:
                                 <code>/set leave embed &lt;title&gt; &lt;color&gt;</code>
+                                <hr>
+                                Removing leave messages by typing remove command.
+                                <br>
+                                Syntax:
+                                <code>/remove leave</code>
                             </div>
                         </div>
                     </div>
@@ -681,7 +728,7 @@
                                 <br>
                                 Syntax:
                                 <code>/automod verify create &lt;message&gt; &lt;role&gt; &lt;channel&gt; &lt;embed&gt;</code>
-                                <br>
+                                <hr>
                                 To make it a embed, type <code>true</code> in embed field.
                                 <br>
                                 Syntax:
@@ -765,6 +812,10 @@
                         </div>
                     </div>
                 </div>
+                <br>
+                <br>
+                <br>
+                <br>
                 <br>
             </div>
             <div style="display: none;" class="settingscontent">
