@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="utf-8">
@@ -21,289 +21,278 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <style>
-    p {
-        margin-top: 1em;
-    }
-
     body {
-        background-color: #36393e;
+        background-color: #242424;
+        font-family: 'Lexend Deca', sans-serif;
+        color: white;
         overflow-x: hidden;
-        line-height: 1;
     }
 
-    .topbar {
+    .navbar {
         background-color: #5865F2;
-        height: 6vw;
-        margin: 0 auto;
-        padding: 0;
-        top: 0;
-        left: 0;
-        position: fixed;
-        width: 100%;
-        color: white;
-        display: flex;
-        overflow: hidden;
-        justify-content: space-between;
-        z-index: 10;
     }
 
-    h1,
-    p,
+    .navbar>.container-fluid {
+        justify-content: normal;
+        align-items: center;
+    }
+
     a {
-        font-family: 'Lexend Deca', sans-serif;
         text-decoration: none;
-        color: white;
     }
 
-    a {
-        color: inherit;
-        cursor: pointer;
-    }
-
-    .button {
+    .buttons {
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        padding: 0 5px 0 5px;
+        margin: 10px;
+        height: 50px;
         background-color: white;
-        color: #5f42e0;
-        font-weight: 600;
-        border: none;
-        font-size: 1.5vw;
-        padding: 1vw;
-        width: 12vw;
-        height: 4vw;
-        border-radius: 1.5vw;
-        transition: 0.25s;
+        border-radius: 45px;
     }
 
-    img,
     .button {
-        margin-top: 1vw;
-        margin-left: 1vw;
-        outline: none;
-    }
-
-    .generatecommandbutton {
-        font-family: 'Lexend Deca', sans-serif;
-        color: white;
-        background: #5f42e0;
+        border: 2px solid #5865F2;
+        box-sizing: border-box;
+        cursor: pointer;
         transition: 0.25s;
-    }
-
-    .generatecommandbutton:hover {
-        color: #5f42e0;
-        background: white;
-    }
-
-    .generatecommandbutton:focus {
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 40px;
+        background-color: #5865F2;
+        border-radius: 45px;
         color: white;
-        background: #5f42e0;
     }
 
     .button:hover {
-        background-color: #5f42e0;
-        color: white;
+        background-color: white;
+        color: #5865F2;
     }
 
-    .content {
-        margin-top: 7vw;
-        display: inline-block;
-        color: white;
-        margin-left: 4.5vw;
-        margin-right: 4.5vw;
-        width: calc(100% - 9vw);
+    .plus {
+        margin-right: 4px;
     }
 
-    .content p {
-        color: #919191;
-        white-space: pre-line;
-        text-align: center;
+    .headset {
+        margin-left: 4px;
     }
 
-    .content h1 {
-        font-weight: 700;
-        font-size: 2em;
+    .book {
+        margin-left: 4px;
+        margin-right: 4px;
     }
 
-    .content {
-        line-height: inherit;
-        padding: 10px;
+    .vr {
+        background-color: #878787;
     }
 
-    @media (orientation:portrait) {
-        .topbar {
-            height: 12vw;
+    .features-container {
+        margin: auto;
+        display: flex;
+    }
+
+    @keyframes opacityAnimation {
+        from {
+            opacity: 0;
         }
 
-        .content {
-            margin-top: 12vw;
-        }
-
-        .button {
-            height: 8vw;
-            width: 24vw;
-            font-size: 3.6vw;
-            margin-right: 3vw !important;
-            margin-top: 2vw !important;
-            border-radius: 3vw;
-        }
-
-        img {
-            margin-left: 2vw;
-            margin-top: 2vw;
-            height: 8vw !important;
-            width: 8vw !important;
+        to {
+            opacity: 100;
         }
     }
 
-    *::-webkit-scrollbar {
-        width: 12px;
-        background-color: #5865F2;
+    @media (max-width: 950px) {
+        .card-title {
+            font-size: 14px;
+        }
+
+        .card-text {
+            font-size: 12px;
+        }
+
+        .card {
+            width: 30vw;
+            margin: 2px;
+        }
     }
 
-    *::-webkit-scrollbar-thumb {
-        background-color: rgb(17, 17, 19);
-        border-radius: 12px;
-        background-clip: content-box;
-        border: 2px solid transparent;
+    @media (min-width: 950px) {
+        .card {
+            width: 25vw;
+            margin: 4px;
+        }
+
+        .card-title {
+            font-size: 28px;
+        }
+
+        .card-text {
+            font-size: 22px;
+        }
     }
 
-    .moreText {
-        background-color: #2b2d31;
-        border-radius: 4vw;
-        padding-left: 2vw;
-        padding-right: 2vw;
-        padding-top: 0.3vw;
-        padding-bottom: 0.3vw;
+    .card {
+        opacity: 0;
+        overflow: hidden;
+        transition: 0.2s;
+        animation: opacityAnimation 0.2s forwards ease;
+    }
+
+    .card4 {
+        animation-delay: 0.15s;
+    }
+
+    .card2 {
+        animation-delay: 0.3s;
+    }
+
+    .card5 {
+        animation-delay: 0.45s;
+    }
+
+    .card3 {
+        animation-delay: 0.6s;
+    }
+
+    .card6 {
+        animation-delay: 0.75s;
+    }
+
+    .card-title,
+    .card-text {
         width: fit-content;
+        transition: 0.2s;
     }
 
-    @keyframes animation {
-        100% {
-            transform: translateX(0%);
-            filter: opacity(100%);
-        }
+    .card-title {
+        color: white;
     }
 
-    @keyframes animation3 {
-        0% {
-            transform: translateY(-45%);
-            filter: opacity(0%);
-        }
-
-        100% {
-            transform: translateY(0%);
-            filter: opacity(100%);
-        }
+    .card-title i {
+        margin-right: 3px;
     }
 
-    .featureslisttitle {
-        animation: 0.9s ease 1 animation3;
+    .custom-tooltip {
+        filter: drop-shadow(0px 0px 1px black);
+        font-family: 'Lexend Deca', sans-serif;
+        --bs-tooltip-opacity: 100%;
+        --bs-tooltip-color: #5865F2;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
         text-align: center;
+        background-color: #121212;
+        width: 100vw;
     }
 
-    @keyframes animation1 {
-        100% {
-            transform: translateY(0%);
-        }
+    footer a {
+        margin: 25px;
+        color: #505050;
     }
 
-    .navbaranimation,
-    .navbaranimation1 {
-        animation-fill-mode: forwards;
-        animation-name: animation1;
-        animation-timing-function: ease;
+    footer a i {
+        margin-right: 3px;
     }
 
-    .navbaranimation {
-        transform: translateX(100%);
-        animation-duration: 1s;
-    }
-
-    .navbaranimation1 {
-        transform: translateX(-100%);
-        animation-duration: 0.6s;
-    }
-
-    .animation1,
-    .animation2,
-    .animation3,
-    .animation4 {
-        animation-fill-mode: forwards;
-        animation-name: animation;
-        animation-duration: 0.8s;
-        animation-timing-function: ease;
-        filter: opacity(0%);
-    }
-
-    .animation1,
-    .animation3 {
-        transform: translateX(-5%);
-    }
-
-    .animation2,
-    .animation4 {
-        transform: translateX(5%);
+    .botIcon {
+        height: 65px;
     }
 </style>
 
 <body>
-    <div class="topbar">
-        <img class="navbaranimation1" style="height: 4vw;"
-            src="https://media.discordapp.net/attachments/1067465793023004712/1113201861474918541/darkie_crown.png">
-        <div class="navbaranimation">
-            <button class="button" onclick="location.href='https://nevermettruelove.github.io/darkie/docs';"
-                style="margin-right: 1.5vw; cursor: pointer;"><a>Docs</a></button>
-            <button class="button"
-                onclick="location.href='https://discord.com/api/oauth2/authorize?client_id=1055863936660025484&amp;permissions=8&amp;scope=bot%20applications.commands';"
-                style="margin-right: 1.5vw; cursor: pointer;"><a>Add
-                    Bot</a></button>
-            <button class="button" onclick="location.href='https://discord.gg/ZAYVXtm5NH';"
-                style="margin-right: 1.5vw; cursor: pointer;"><a>Support</a></button>
+    <nav class="navbar bg-body-dark">
+        <div class="container-fluid">
+            <img class="botIcon"
+                src="https://media.discordapp.net/attachments/1067465793023004712/1113201861474918541/darkie_crown.png" />
+            <div class="buttons">
+                <a
+                    href="https://discord.com/api/oauth2/authorize?client_id=1055863936660025484&amp;permissions=8&amp;scope=bot%20applications.commands">
+                    <div class="button plus" title="Add Darkie" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        data-bs-custom-class="custom-tooltip">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </a>
+                <div class="vr"></div>
+                <a href="https://nevermettruelove.github.io/darkie/docs">
+                    <div class="button book" title="Docs" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        data-bs-custom-class="custom-tooltip">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                </a>
+                <div class="vr"></div>
+                <a href="https://discord.gg/ZAYVXtm5NH">
+                    <div class="button headset" title="Support Server" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" data-bs-custom-class="custom-tooltip">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <h1 style="text-align: center; margin-top: 8px;">Features</h1>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+        <div class="features-container">
+            <div class="card card1">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fa-solid fa-shield"></i> Moderation</h5>
+                    <p class="card-text">Moderate your server easily by using moderation commands.</p>
+                </div>
+            </div>
+            <div class="card card2">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fa-solid fa-message"></i> Welcome Messages</h5>
+                    <p class="card-text">It's great to give new members a welcome.</p>
+                </div>
+            </div>
+            <div class="card card3">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fa-solid fa-face-laugh-beam"></i> 4Fun</h5>
+                    <p class="card-text">Commands for doing fun things!</p>
+                </div>
+            </div>
+        </div>
+        <div class="features-container">
+            <div class="card card4">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fa-solid fa-person-circle-xmark"></i> Anti-Invite</h5>
+                    <p class="card-text">Prevent unwanted members from joining your server.</p>
+                </div>
+            </div>
+            <div class="card card5">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fa-solid fa-wand-magic-sparkles"></i> Autoroles</h5>
+                    <p class="card-text">Give roles to new members!</p>
+                </div>
+            </div>
+            <div class="card card6">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fa-solid fa-wallet"></i> Economy</h5>
+                    <p class="card-text">Get money and spend on things available in the shop. <span style="color: #bd2424;">Coming soon.</span></p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="content">
-        <h1 class="featureslisttitle">Features</h1>
-        <div class="animation1">
-            <h1><i style="margin-right: 0.5vw; display: inline-block; width: 40px; height: 40px; font-size: 40px;"
-                    class="fa-solid fa-shield-halved"></i>
-                Moderation</h1>
-            <div class="moreText">
-                <p>Moderate your server easily by using moderation commands.</p>
-            </div>
-        </div>
-        <div class="animation2">
-            <div style="text-align: right;">
-                <h1>Welcome Messages<i
-                        style="margin-left: 1.5vw; display: inline-block; width: 40px; height: 40px; font-size: 40px;"
-                        class="fa-solid fa-right-to-bracket"></i></h1>
-            </div>
-            <div style="float: right;" class="moreText">
-                <p>It's great to give new members a welcome.</p>
-            </div>
-        </div>
-        <span style="height: 60px; display: block; filter: opacity(0%);"></span>
-        <div class="animation3">
-            <h1><i style="margin-right: 0.5vw; display: inline-block; width: 40px; height: 40px; font-size: 40px;"
-                    class="fa-solid fa-face-smile-beam"></i>
-                4Fun</h1>
-            <div class="moreText">
-                <p>Commands to use for fun & more!</p>
-            </div>
-        </div>
-        <div class="animation4">
-            <div style="text-align: right;">
-                <h1>Anti-Invite<i
-                        style="margin-left: 1.5vw; display: inline-block; width: 40px; height: 40px; font-size: 40px;"
-                        class="fa-solid fa-circle-xmark"></i></h1>
-            </div>
-            <div style="float: right;" class="moreText">
-                <p>Prevent unwanted members from joining your server.</p>
-            </div>
-        </div>
-    </div>
+    <br><br><br>
+    <footer>
+        <a href="./privacy-policy.html"><i class="fa-solid fa-file-contract"></i> Privacy Policy</a>
+        <hr style="margin: 0.2rem 0; color: #484848;">
+        <a href="./tos.html"><i class="fa-solid fa-file-invoice"></i> Terms of Service</a>
+    </footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
     crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
 
 </html>
