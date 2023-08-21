@@ -6,22 +6,22 @@
     <title>Darkie Docs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/ad4491eefa.js" crossorigin="anonymous"></script>
     <meta name="author" content="Darkie Docs" />
     <link rel="icon" type="image/png"
-          href="https://cdn.discordapp.com/attachments/1067465793023004712/1113201861474918541/darkie_crown.png">
+        href="https://cdn.discordapp.com/attachments/1067465793023004712/1113201861474918541/darkie_crown.png">
     <meta name="description" content="Documentation of Darkie Bot that contains useful information about bot & more." />
     <meta property="og:image"
-          content="https://cdn.discordapp.com/attachments/1067465793023004712/1113201861474918541/darkie_crown.png">
+        content="https://cdn.discordapp.com/attachments/1067465793023004712/1113201861474918541/darkie_crown.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <style>
-    body
-    {
+    body {
         background-color: #242424;
         overflow: hidden;
         min-height: 100%;
@@ -31,36 +31,30 @@
     h1,
     h2,
     h3,
-    a
-    {
+    a {
         font-family: 'Lexend Deca', sans-serif;
         color: white;
         text-decoration: none;
     }
 
-    @keyframes contentanimation
-    {
-        from
-        {
+    @keyframes contentanimation {
+        from {
             opacity: 0;
         }
 
-        to
-        {
+        to {
             opacity: 100;
         }
     }
 
-    .content
-    {
+    .content {
         height: 100%;
         width: 100%;
         display: flex;
         border-top: 1px solid #2c2c2c;
     }
 
-    .item
-    {
+    .item {
         background: none;
         border-radius: 6px;
         margin: auto;
@@ -71,19 +65,16 @@
         transition: 0.25s;
     }
 
-    .clicked
-    {
+    .clicked {
         background: #2c2c2c;
         box-shadow: inset 0 0 0 1px #3f3f3f;
     }
 
-    .p-clicked
-    {
+    .p-clicked {
         color: #4fffad;
     }
 
-    .item p
-    {
+    .item p {
         margin-right: 10px;
         margin-left: 10px;
         transition: 0.25s;
@@ -95,21 +86,18 @@
         font-size: 17px;
     }
 
-        .item p:hover
-        {
-            color: #4fffad;
-        }
+    .item p:hover {
+        color: #4fffad;
+    }
 
-        .item p a
-        {
-            margin-left: 6px;
-            margin-right: 6px;
-        }
+    .item p a {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
 
     .homecontent,
     .commandcontent,
-    .settingscontent
-    {
+    .settingscontent {
         padding: 45px;
         padding-top: 30px;
         overflow-y: auto;
@@ -119,56 +107,34 @@
         animation: 0.6s contentanimation ease;
     }
 
-        .homecontent p,
-        .commandcontent p,
-        .settingscontent p
-        {
-            color: #bdbdbd;
-            font-weight: 300;
-        }
+    .homecontent p,
+    .commandcontent p,
+    .settingscontent p {
+        color: #bdbdbd;
+        font-weight: 300;
+    }
 
-        .homecontent li,
-        .commandcontent li,
-        .settingscontent li
-        {
-            color: #bdbdbd;
-            font-weight: 300;
-            font-family: 'Lexend Deca', sans-serif;
-        }
+    .homecontent li,
+    .commandcontent li,
+    .settingscontent li {
+        color: #bdbdbd;
+        font-weight: 300;
+        font-family: 'Lexend Deca', sans-serif;
+    }
 
-    *::-webkit-scrollbar
-    {
+    *::-webkit-scrollbar {
         width: 10px;
         background: none;
     }
 
-    *::-webkit-scrollbar-thumb
-    {
+    *::-webkit-scrollbar-thumb {
         background-color: rgb(19, 19, 19);
         border-radius: 12px;
         background-clip: content-box;
         border: 2px solid transparent;
     }
 
-    .alert
-    {
-        font-family: 'Lexend Deca', sans-serif;
-        font-weight: 300;
-        color: white;
-        border: 1px rgb(20, 20, 20) solid;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-        width: fit-content;
-    }
-
-        .alert i
-        {
-            vertical-align: middle;
-            margin-right: 8px;
-            font-size: 25px;
-        }
-
-    .item i
-    {
+    .item i {
         width: 20px;
         margin-left: 4px;
         margin-right: 4px;
@@ -176,22 +142,28 @@
         justify-content: center;
     }
 
-    .versionspan
-    {
+    .versionspan {
         color: white;
-        font-weight: 400;
-        background: linear-gradient(90deg, rgb(53, 214, 201), rgb(44, 226, 126));
+        background: #242424;
         padding-left: 12px;
         padding-right: 12px;
-        border-radius: 6px;
-        box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
-        text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5), 0px 0px 8px rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        border: 1px solid #2c2c2c;
+        font-family: 'Lexend Deca', sans-serif;
         position: absolute;
         right: 13px;
     }
 
-    .docstext
-    {
+    .versionspan a {
+        background: linear-gradient(90deg, rgb(53, 214, 201), rgb(44, 226, 126));
+        font-weight: 600;
+        background-clip: inherit;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0px 0px 6px rgba(79, 255, 240, 0.4), 0px 0px 13px rgba(79, 170, 255, 0.3);
+    }
+
+    .docstext {
         margin-left: 2px;
         background: -webkit-linear-gradient(90deg, rgb(69, 236, 186), rgb(141, 255, 96));
         font-weight: 600;
@@ -201,20 +173,21 @@
         text-shadow: 0px 0px 6px rgba(79, 255, 240, 0.4), 0px 0px 13px rgba(79, 170, 255, 0.3);
     }
 
-    .docversiontooltip
-    {
-        --bs-tooltip-bg: #7affa6;
-        --bs-tooltip-color: #20422c;
+    .docversiontooltip {
+        --bs-tooltip-arrow-width: 0;
+        --bs-tooltip-arrow-height: 0;
+        outline: 1px solid #2c2c2c;
+        border-radius: 10px;
+        --bs-tooltip-bg: #242424;
+        --bs-tooltip-color: #7affa6;
         font-family: 'Lexend Deca', sans-serif;
     }
 
-    hr
-    {
+    hr {
         color: rgba(255, 255, 255, 0.5);
     }
 
-    .copytoclipboardbutton
-    {
+    .copytoclipboardbutton {
         text-align: center;
         margin-left: 12px;
         color: #4fffad;
@@ -228,22 +201,18 @@
         cursor: pointer;
     }
 
-        .copytoclipboardbutton:hover
-        {
-            background-color: #4fffad;
-            color: black;
-        }
+    .copytoclipboardbutton:hover {
+        background-color: #4fffad;
+        color: black;
+    }
 
-    .hreflink
-    {
+    .hreflink {
         color: #87ffc7;
         text-decoration: underline dotted #4fffad;
     }
 
-    @media (orientation: portrait)
-    {
-        .item p
-        {
+    @media (orientation: portrait) {
+        .item p {
             margin-left: 3px;
             margin-right: 3px;
             font-size: 14px;
@@ -252,18 +221,15 @@
             padding-bottom: 2px;
         }
 
-        .contentfield
-        {
+        .contentfield {
             border: none !important;
         }
 
-        .content
-        {
+        .content {
             display: block;
         }
 
-        .leftselector
-        {
+        .leftselector {
             height: fit-content !important;
             padding-bottom: 10px;
             border-bottom: 1px solid #2c2c2c;
@@ -271,104 +237,125 @@
 
         .homecontent,
         .commandcontent,
-        .settingscontent
-        {
+        .settingscontent {
             height: calc(100% - (150px + 56px));
         }
     }
 
-    .leftselector
-    {
+    .leftselector {
         height: 100vh;
         flex: 1;
         background: #242424;
     }
 
-    .form-check-input:checked
-    {
+    .form-check-input:checked {
         background-color: #4fffad;
         border-color: #4fffad;
         transition: 0.8s;
     }
 
-    .form-check-input:focus
-    {
+    .form-check-input:focus {
         border-color: #4fffad;
         box-shadow: 0 0 0 0.25rem rgba(79, 255, 173, 0.25);
         transition: 0.4s;
     }
 
-    .accordion
-    {
+    .accordion {
         --bs-accordion-bg: #212926;
         --bs-border-color: #49574c;
         --bs-body-color: #a1ceb8;
     }
 
-    .accordion-button:focus
-    {
+    .accordion-button:focus {
         border-color: #4fffad;
         box-shadow: 0 0 0 0.25rem rgba(79, 255, 173, 0.25);
     }
 
-    .accordion-button:not(.collapsed)
-    {
+    .accordion-button:not(.collapsed) {
         color: #4fffad;
         background-color: #094629;
     }
 
-    .accordion-button.collapsed::after
-    {
+    .accordion-button.collapsed::after {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234fffad'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
     }
 
-    .accordion-button:not(.collapsed)::after
-    {
+    .accordion-button:not(.collapsed)::after {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234fffad'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
     }
 
-    code
-    {
+    code {
         padding: 3px 5px 3px 5px;
         background: #05130b;
         border-radius: 8px;
         color: #4fffad;
     }
 
-    .accordion-button
-    {
+    .accordion-button {
         padding-left: 16px;
         padding-right: 16px;
     }
 
-        .accordion-button i
-        {
-            display: flex;
-            justify-content: center;
-            margin-right: 16px;
-            font-size: 20px;
-            height: 20px;
-            width: 20px;
-        }
+    .accordion-button i {
+        display: flex;
+        justify-content: center;
+        margin-right: 16px;
+        font-size: 20px;
+        height: 20px;
+        width: 20px;
+    }
 
-        .accordion-button .vr
-        {
-            margin-right: 16px;
-            margin-top: -16px;
-            margin-bottom: -16px;
-        }
+    .accordion-button .vr {
+        margin-right: 16px;
+        margin-top: -16px;
+        margin-bottom: -16px;
+    }
+
+    .navbar>.container-fluid {
+        justify-content: normal;
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+    }
+
+    .gobackbutton {
+        border-radius: 10px;
+        color: #7affa6;
+        background: #242424;
+        height: 40px;
+        width: 40px;
+        border: 1px solid #2c2c2c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .gobackbutton:hover {
+        background: #2c2c2c;
+        border: 1px solid #3f3f3f;
+    }
 </style>
 
 <body>
     <nav class="navbar navbar-light" style="background-color: #202020;">
         <div class="container-fluid">
-            <a style="display: flex; align-items: center;" class="navbar-brand" style="color: white;">
+            <a style="display: flex; align-items: center; margin-right: 12px;" class="navbar-brand" style="color: white;">
                 <img src="https://cdn.discordapp.com/attachments/1067465793023004712/1113201861474918541/darkie_crown.png"
-                     alt="" width="34" height="30" style="padding-right: 4px;" class="d-inline-block align-text-top">
+                    alt="" width="34" height="30" style="padding-right: 4px;" class="d-inline-block align-text-top">
                 <span class="docstext">Docs</span>
-                <span class="versionspan" style="font-size: 18px;" data-bs-toggle="tooltip"
-                      data-bs-custom-class="docversiontooltip" data-bs-title="Documentation Version">1.3</span>
             </a>
+            <div style="margin-right: 12px; margin-top: -8px; margin-bottom: -8px; background-color: #2c2c2c; opacity: 100;"
+                class="vr"></div>
+            <a href="./index.html">
+                <div title="Go Back" data-bs-toggle="tooltip" data-bs-custom-class="docversiontooltip"
+                    class="gobackbutton"><i class="fa-solid fa-house"></i></div>
+            </a>
+            <span class="versionspan" style="font-size: 18px;" data-bs-toggle="tooltip"
+                data-bs-custom-class="docversiontooltip" data-bs-title="Documentation Version"><a>1.3</a></span>
         </div>
     </nav>
     <div class="content" id="content">
@@ -385,7 +372,7 @@
             </div>
         </div>
         <div class="contentfield" id="contentfield"
-             style="flex: 4; border-left: 1px solid #2c2c2c; height: 100vh; background: #202020;">
+            style="flex: 4; border-left: 1px solid #2c2c2c; height: 100vh; background: #202020;">
             <div style="display: none;" class="homecontent">
                 <h1>Home</h1>
                 <p>
@@ -395,17 +382,17 @@
                 </p>
                 <hr style="color: rgb(128, 128, 128);" class="hr hr-blurry" />
                 <h3>Introduction</h3>
-                    <p>
-                        Darkie Bot is powerful discord bot used for moderating your server & more. It can be used for:
-                        <li style="color: #d36d6d;">moderating your server</li>
-                        <li style="color: #6dd37b;">greeting your members</li>
-                        <li style="color: #aa6dd3;">preventing unwanted users from joining</li>
-                        <li style="color: #d3a36d;">communicating with friends through 4fun commands</li>
-                        <li style="color: #6dd3a8;">assigning roles through the autorole system</li>
-                        <li style="color: #806dd3;">getting server information</li>
-                        <li style="color: #ccd36d;">verifying users with verification system</li>
-                    </p>
-                    <p>To make these features work, check commands!</p>
+                <p>
+                    Darkie Bot is powerful discord bot used for moderating your server & more. It can be used for:
+                    <li style="color: #d36d6d;">moderating your server</li>
+                    <li style="color: #6dd37b;">greeting your members</li>
+                    <li style="color: #aa6dd3;">preventing unwanted users from joining</li>
+                    <li style="color: #d3a36d;">communicating with friends through 4fun commands</li>
+                    <li style="color: #6dd3a8;">assigning roles through the autorole system</li>
+                    <li style="color: #806dd3;">getting server information</li>
+                    <li style="color: #ccd36d;">verifying users with verification system</li>
+                </p>
+                <p>To make these features work, check commands!</p>
             </div>
             <div style="display: none;" class="commandcontent">
                 <h1>Commands</h1>
@@ -418,12 +405,13 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                <i class="fa-solid fa-user-slash"></i><div class="vr"></div>Ban
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <i class="fa-solid fa-user-slash"></i>
+                                <div class="vr"></div>Ban
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Bans specific user.
                                 <br>
@@ -435,12 +423,13 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <i class="fa-solid fa-user-minus"></i><div class="vr"></div>Kick
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <i class="fa-solid fa-user-minus"></i>
+                                <div class="vr"></div>Kick
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Kicks specific user.
                                 <br>
@@ -452,12 +441,13 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <i class="fa-solid fa-address-book"></i><div class="vr"></div>Banlist
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <i class="fa-solid fa-address-book"></i>
+                                <div class="vr"></div>Banlist
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Shows list of banned users.
                                 <br>
@@ -469,12 +459,13 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFour">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                <i class="fa-solid fa-comment-slash"></i><div class="vr"></div>Mute
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <i class="fa-solid fa-comment-slash"></i>
+                                <div class="vr"></div>Mute
                             </button>
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Mutes specific user.
                                 <br>
@@ -486,12 +477,13 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFive">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                <i class="fa-solid fa-comment"></i><div class="vr"></div>Unmute
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <i class="fa-solid fa-comment"></i>
+                                <div class="vr"></div>Unmute
                             </button>
                         </h2>
                         <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Removes mute of specific user.
                                 <br>
@@ -503,12 +495,13 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingSix">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                <i class="fa-solid fa-triangle-exclamation"></i><div class="vr"></div>Warn
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <div class="vr"></div>Warn
                             </button>
                         </h2>
                         <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Warns specific user.
                                 <br>
@@ -520,13 +513,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwentyThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwentyThree" aria-expanded="false"
-                                    aria-controls="collapseTwentyThree">
-                                <i class="fa-solid fa-eraser"></i><div class="vr"></div>Clear
+                                data-bs-target="#collapseTwentyThree" aria-expanded="false"
+                                aria-controls="collapseTwentyThree">
+                                <i class="fa-solid fa-eraser"></i>
+                                <div class="vr"></div>Clear
                             </button>
                         </h2>
                         <div id="collapseTwentyThree" class="accordion-collapse collapse"
-                             aria-labelledby="headingTwentyThree" data-bs-parent="#accordionExample">
+                            aria-labelledby="headingTwentyThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Cleares messages from channel.
                                 <br>
@@ -542,12 +536,13 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingSeven">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                <i class="fa-solid fa-face-surprise"></i><div class="vr"></div>Reaction GIFS
+                                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                <i class="fa-solid fa-face-surprise"></i>
+                                <div class="vr"></div>Reaction GIFS
                             </button>
                         </h2>
                         <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Sends reaction GIF.
                                 <br>
@@ -562,13 +557,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwentyOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwentyOne" aria-expanded="false"
-                                    aria-controls="collapseTwentyOne">
-                                <i class="fa-solid fa-dice"></i><div class="vr"></div>Roll X to Y Number
+                                data-bs-target="#collapseTwentyOne" aria-expanded="false"
+                                aria-controls="collapseTwentyOne">
+                                <i class="fa-solid fa-dice"></i>
+                                <div class="vr"></div>Roll X to Y Number
                             </button>
                         </h2>
                         <div id="collapseTwentyOne" class="accordion-collapse collapse"
-                             aria-labelledby="headingTwentyOne" data-bs-parent="#accordionExample">
+                            aria-labelledby="headingTwentyOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Rolls X to Y number.
                                 <br>
@@ -581,13 +577,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwentyTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwentyTwo" aria-expanded="false"
-                                    aria-controls="collapseTwentyTwo">
-                                <i class="fa-solid fa-comment-dots"></i><div class="vr"></div>Magic 8ball
+                                data-bs-target="#collapseTwentyTwo" aria-expanded="false"
+                                aria-controls="collapseTwentyTwo">
+                                <i class="fa-solid fa-comment-dots"></i>
+                                <div class="vr"></div>Magic 8ball
                             </button>
                         </h2>
                         <div id="collapseTwentyTwo" class="accordion-collapse collapse"
-                             aria-labelledby="headingTwentyTwo" data-bs-parent="#accordionExample">
+                            aria-labelledby="headingTwentyTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Answers a question.
                                 <br>
@@ -599,13 +596,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwentyFour">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwentyFour" aria-expanded="false"
-                                    aria-controls="collapseTwentyFour">
-                                <i class="fa-solid fa-hashtag"></i><div class="vr"></div>Suggestion Channel
+                                data-bs-target="#collapseTwentyFour" aria-expanded="false"
+                                aria-controls="collapseTwentyFour">
+                                <i class="fa-solid fa-hashtag"></i>
+                                <div class="vr"></div>Suggestion Channel
                             </button>
                         </h2>
                         <div id="collapseTwentyFour" class="accordion-collapse collapse"
-                             aria-labelledby="headingTwentyFour" data-bs-parent="#accordionExample">
+                            aria-labelledby="headingTwentyFour" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Sets suggestion channel.
                                 <br>
@@ -621,12 +619,13 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingEight">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                <i class="fa-solid fa-globe"></i><div class="vr"></div>Server
+                                data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                <i class="fa-solid fa-globe"></i>
+                                <div class="vr"></div>Server
                             </button>
                         </h2>
                         <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Shows server information.
                                 <br>
@@ -638,12 +637,13 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingNine">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                <i class="fa-solid fa-user-pen"></i><div class="vr"></div>Roles
+                                data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                <i class="fa-solid fa-user-pen"></i>
+                                <div class="vr"></div>Roles
                             </button>
                         </h2>
                         <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Shows server roles.
                                 <br>
@@ -655,12 +655,13 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTen">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                                <i class="fa-solid fa-image"></i><div class="vr"></div>Avatar
+                                data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                <i class="fa-solid fa-image"></i>
+                                <div class="vr"></div>Avatar
                             </button>
                         </h2>
                         <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Shows specific user's avatar.
                                 <br>
@@ -672,12 +673,13 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingEleven">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-                                <i class="fa-solid fa-circle-question"></i><div class="vr"></div>Help
+                                data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                <i class="fa-solid fa-circle-question"></i>
+                                <div class="vr"></div>Help
                             </button>
                         </h2>
                         <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Shows help message.
                                 <br>
@@ -689,12 +691,13 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwelve">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
-                                <i class="fa-solid fa-signal"></i><div class="vr"></div>Ping
+                                data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                                <i class="fa-solid fa-signal"></i>
+                                <div class="vr"></div>Ping
                             </button>
                         </h2>
                         <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Shows bot's current ping.
                                 <br>
@@ -706,13 +709,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThirteen">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThirteen" aria-expanded="false"
-                                    aria-controls="collapseThirteen">
-                                <i class="fa-solid fa-user"></i><div class="vr"></div>User
+                                data-bs-target="#collapseThirteen" aria-expanded="false"
+                                aria-controls="collapseThirteen">
+                                <i class="fa-solid fa-user"></i>
+                                <div class="vr"></div>User
                             </button>
                         </h2>
                         <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Shows specific user's information.
                                 <br>
@@ -728,13 +732,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFourteen">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFourteen" aria-expanded="false"
-                                    aria-controls="collapseFourteen">
-                                <i class="fa-solid fa-right-to-bracket"></i><div class="vr"></div>Welcome Messages
+                                data-bs-target="#collapseFourteen" aria-expanded="false"
+                                aria-controls="collapseFourteen">
+                                <i class="fa-solid fa-right-to-bracket"></i>
+                                <div class="vr"></div>Welcome Messages
                             </button>
                         </h2>
                         <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Sets a message that appears when a member joins your server.
                                 <br>
@@ -758,12 +763,13 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFifteen">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
-                                <i class="fa-solid fa-right-from-bracket"></i><div class="vr"></div>Leave Messages
+                                data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <div class="vr"></div>Leave Messages
                             </button>
                         </h2>
                         <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Sets a message that appears when a member leaves your server.
                                 <br>
@@ -791,12 +797,13 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingSixteen">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
-                                <i class="fa-solid fa-shield"></i><div class="vr"></div>Create Verification System
+                                data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+                                <i class="fa-solid fa-shield"></i>
+                                <div class="vr"></div>Create Verification System
                             </button>
                         </h2>
                         <div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Creates verification system.
                                 <br>
@@ -813,13 +820,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingSeventeen">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSeventeen" aria-expanded="false"
-                                    aria-controls="collapseSeventeen">
-                                <i class="fa-solid fa-shield-halved"></i><div class="vr"></div>Remove Verification System
+                                data-bs-target="#collapseSeventeen" aria-expanded="false"
+                                aria-controls="collapseSeventeen">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <div class="vr"></div>Remove Verification System
                             </button>
                         </h2>
                         <div id="collapseSeventeen" class="accordion-collapse collapse"
-                             aria-labelledby="headingSeventeen" data-bs-parent="#accordionExample">
+                            aria-labelledby="headingSeventeen" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Removes server's verification system.
                                 <br>
@@ -835,13 +843,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingEighteen">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseEighteen" aria-expanded="false"
-                                    aria-controls="collapseEighteen">
-                                <i class="fa-solid fa-circle-plus"></i><div class="vr"></div>Add Role to Autorole System
+                                data-bs-target="#collapseEighteen" aria-expanded="false"
+                                aria-controls="collapseEighteen">
+                                <i class="fa-solid fa-circle-plus"></i>
+                                <div class="vr"></div>Add Role to Autorole System
                             </button>
                         </h2>
                         <div id="collapseEighteen" class="accordion-collapse collapse" aria-labelledby="headingEighteen"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Adds specific role to autorole system.
                                 <br>
@@ -853,13 +862,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingNineteen">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseNineteen" aria-expanded="false"
-                                    aria-controls="collapseNineteen">
-                                <i class="fa-solid fa-circle-minus"></i><div class="vr"></div>Remove Role from Autorole System
+                                data-bs-target="#collapseNineteen" aria-expanded="false"
+                                aria-controls="collapseNineteen">
+                                <i class="fa-solid fa-circle-minus"></i>
+                                <div class="vr"></div>Remove Role from Autorole System
                             </button>
                         </h2>
                         <div id="collapseNineteen" class="accordion-collapse collapse" aria-labelledby="headingNineteen"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Removes specific role from autorole system.
                                 <br>
@@ -871,12 +881,13 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwenty">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
-                                <i class="fa-solid fa-table-list"></i><div class="vr"></div>Autorole Roles List
+                                data-bs-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
+                                <i class="fa-solid fa-table-list"></i>
+                                <div class="vr"></div>Autorole Roles List
                             </button>
                         </h2>
                         <div id="collapseTwenty" class="accordion-collapse collapse" aria-labelledby="headingTwenty"
-                             data-bs-parent="#accordionExample">
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Shows autorole system roles list.
                                 <br>
@@ -892,12 +903,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwentyFive">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwentyFive" aria-expanded="false" aria-controls="collapseTwentyFive">
-                                <i class="fa-solid fa-circle-plus"></i><div class="vr"></div>Add Role to Automod System
+                                data-bs-target="#collapseTwentyFive" aria-expanded="false"
+                                aria-controls="collapseTwentyFive">
+                                <i class="fa-solid fa-circle-plus"></i>
+                                <div class="vr"></div>Add Role to Automod System
                             </button>
                         </h2>
-                        <div id="collapseTwentyFive" class="accordion-collapse collapse" aria-labelledby="headingTwentyFive"
-                             data-bs-parent="#accordionExample">
+                        <div id="collapseTwentyFive" class="accordion-collapse collapse"
+                            aria-labelledby="headingTwentyFive" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Adds specific admin role.
                                 <br>
@@ -909,12 +922,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwentySix">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwentySix" aria-expanded="false" aria-controls="collapseTwentySix">
-                                <i class="fa-solid fa-circle-minus"></i><div class="vr"></div>Remove Role to Automod System
+                                data-bs-target="#collapseTwentySix" aria-expanded="false"
+                                aria-controls="collapseTwentySix">
+                                <i class="fa-solid fa-circle-minus"></i>
+                                <div class="vr"></div>Remove Role to Automod System
                             </button>
                         </h2>
-                        <div id="collapseTwentySix" class="accordion-collapse collapse" aria-labelledby="headingTwentySix"
-                             data-bs-parent="#accordionExample">
+                        <div id="collapseTwentySix" class="accordion-collapse collapse"
+                            aria-labelledby="headingTwentySix" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Removes specific admin role.
                                 <br>
@@ -926,12 +941,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwentySeven">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwentySeven" aria-expanded="false" aria-controls="collapseTwentySeven">
-                                <i class="fa-solid fa-table-list"></i><div class="vr"></div>Admin Roles List
+                                data-bs-target="#collapseTwentySeven" aria-expanded="false"
+                                aria-controls="collapseTwentySeven">
+                                <i class="fa-solid fa-table-list"></i>
+                                <div class="vr"></div>Admin Roles List
                             </button>
                         </h2>
-                        <div id="collapseTwentySeven" class="accordion-collapse collapse" aria-labelledby="headingTwentySeven"
-                             data-bs-parent="#accordionExample">
+                        <div id="collapseTwentySeven" class="accordion-collapse collapse"
+                            aria-labelledby="headingTwentySeven" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Shows admin roles list.
                                 <br>
@@ -953,21 +970,29 @@
                 <hr style="color: rgb(128, 128, 128);" class="hr hr-blurry" />
                 <h3>Layout</h3>
                 <div style="background: #313131; padding: 10px; width: fit-content; border-radius: 15px;">
-                    <div style="overflow: hidden; display: flex; background: #202020; height: 200px; width: 350px; border-radius: 12px;">
+                    <div
+                        style="overflow: hidden; display: flex; background: #202020; height: 200px; width: 350px; border-radius: 12px;">
                         <div style="flex: 1; background-color: #242424; border-right: 1px solid #2c2c2c;"></div>
-                        <div style="flex: 4; background-color: #202020; overflow: hidden; font-size: 8px; padding: 15px;">
-                            <div style="background-color: rgb(199, 199, 199); width: 50px; height: 10px; border-radius: 3px;">
+                        <div
+                            style="flex: 4; background-color: #202020; overflow: hidden; font-size: 8px; padding: 15px;">
+                            <div
+                                style="background-color: rgb(199, 199, 199); width: 50px; height: 10px; border-radius: 3px;">
                             </div>
-                            <div style="background-color: rgb(87, 87, 87); margin-top: 10px; width: 120px; height: 10px; border-radius: 3px;">
+                            <div
+                                style="background-color: rgb(87, 87, 87); margin-top: 10px; width: 120px; height: 10px; border-radius: 3px;">
                             </div>
                             <hr>
-                            <div style="background-color: rgb(199, 199, 199); margin-top: 10px; width: 40px; height: 9px; border-radius: 3px;">
+                            <div
+                                style="background-color: rgb(199, 199, 199); margin-top: 10px; width: 40px; height: 9px; border-radius: 3px;">
                             </div>
-                            <div style="background-color: rgb(87, 87, 87); margin-top: 10px; height: 10px; border-radius: 3px;">
+                            <div
+                                style="background-color: rgb(87, 87, 87); margin-top: 10px; height: 10px; border-radius: 3px;">
                             </div>
-                            <div style="background-color: rgb(87, 87, 87); margin-top: 10px; height: 10px; border-radius: 3px;">
+                            <div
+                                style="background-color: rgb(87, 87, 87); margin-top: 10px; height: 10px; border-radius: 3px;">
                             </div>
-                            <div style="background-color: rgb(87, 87, 87); margin-top: 10px; width: 70px; height: 10px; border-radius: 3px;">
+                            <div
+                                style="background-color: rgb(87, 87, 87); margin-top: 10px; width: 70px; height: 10px; border-radius: 3px;">
                             </div>
                         </div>
                     </div>
@@ -979,20 +1004,28 @@
                     </label>
                 </div>
                 <div style="background: #313131; padding: 10px; width: fit-content; border-radius: 15px;">
-                    <div style="overflow: hidden; display: flex; background: #202020; height: 200px; width: 350px; border-radius: 12px;">
-                        <div style="flex: 4; background-color: #202020; overflow: hidden; font-size: 8px; padding: 15px;">
-                            <div style="background-color: rgb(199, 199, 199); width: 50px; height: 10px; border-radius: 3px;">
+                    <div
+                        style="overflow: hidden; display: flex; background: #202020; height: 200px; width: 350px; border-radius: 12px;">
+                        <div
+                            style="flex: 4; background-color: #202020; overflow: hidden; font-size: 8px; padding: 15px;">
+                            <div
+                                style="background-color: rgb(199, 199, 199); width: 50px; height: 10px; border-radius: 3px;">
                             </div>
-                            <div style="background-color: rgb(87, 87, 87); margin-top: 10px; width: 120px; height: 10px; border-radius: 3px;">
+                            <div
+                                style="background-color: rgb(87, 87, 87); margin-top: 10px; width: 120px; height: 10px; border-radius: 3px;">
                             </div>
                             <hr>
-                            <div style="background-color: rgb(199, 199, 199); margin-top: 10px; width: 40px; height: 9px; border-radius: 3px;">
+                            <div
+                                style="background-color: rgb(199, 199, 199); margin-top: 10px; width: 40px; height: 9px; border-radius: 3px;">
                             </div>
-                            <div style="background-color: rgb(87, 87, 87); margin-top: 10px; height: 10px; border-radius: 3px;">
+                            <div
+                                style="background-color: rgb(87, 87, 87); margin-top: 10px; height: 10px; border-radius: 3px;">
                             </div>
-                            <div style="background-color: rgb(87, 87, 87); margin-top: 10px; height: 10px; border-radius: 3px;">
+                            <div
+                                style="background-color: rgb(87, 87, 87); margin-top: 10px; height: 10px; border-radius: 3px;">
                             </div>
-                            <div style="background-color: rgb(87, 87, 87); margin-top: 10px; width: 70px; height: 10px; border-radius: 3px;">
+                            <div
+                                style="background-color: rgb(87, 87, 87); margin-top: 10px; width: 70px; height: 10px; border-radius: 3px;">
                             </div>
                         </div>
                         <div style="flex: 1; background-color: #242424; border-left: 1px solid #2c2c2c;"></div>
@@ -1010,10 +1043,10 @@
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-        crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 <script>
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))

@@ -102,6 +102,44 @@
     .fa-solid {
         line-height: 0;
     }
+
+    .card {
+        overflow: hidden;
+        transition: 0.2s;
+        background-color: #272727;
+    }
+
+    .list-group-item {
+        background-color: #272727;
+    }
+
+    .flexcontainerelement {
+        flex: 1;
+        text-align: center;
+        padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+        font-size: 1.75rem;
+        line-height: 1.15;
+    }
+
+    .flexcontainerelement:nth-child(n + 2) {
+        border-left: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    }
+
+    .policydescription {
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+    @media (max-width: 1150px) {
+        .storedatainfo {
+            flex-direction: column;
+        }
+
+        .flexcontainerelement:nth-child(n + 2) {
+            border-left: none;
+            border-top: var(--bs-card-border-width) solid var(--bs-card-border-color);
+        }
+    }
 </style>
 
 <body>
@@ -142,7 +180,57 @@
         </div>
     </nav>
     <h1 style="text-align: center; margin-top: 8px;">Privacy Policy</h1>
-    <h4 style="text-align: center; font-weight: 200;">Work in progress!</h4>
+    <div class="card" style="width: 65.5%; margin-left: auto; margin-right: auto;">
+        <div class="card-header">
+            What is Darkie Bot storing?
+        </div>
+        <div class="storedatainfo" style="display: flex; padding: 0;" class="card-body">
+            <div class="flexcontainerelement">Server IDs<br><span class="policydescription">Server Data and Premium
+                    Functions</span></div>
+            <div class="flexcontainerelement">User IDs<br><span class="policydescription">Economy</span></div>
+            <div class="flexcontainerelement">Channel IDs<br><span class="policydescription">Welcome & Leave Messages,
+                    Verify System and Ticket System</span></div>
+            <div class="flexcontainerelement">Role IDs<br><span class="policydescription">Autorole System</span></div>
+        </div>
+        <div style="border-top: var(--bs-card-border-width) solid var(--bs-card-border-color);" class="card-header">
+            Who can access the data?
+        </div>
+        <div class="card-body">
+            Only Darkie Bot developers can access all the data.
+        </div>
+        <div style="border-top: var(--bs-card-border-width) solid var(--bs-card-border-color);" class="card-header">
+            How can I delete the stored data?
+        </div>
+        <div class="card-body">
+            Server data/user data:<br>
+            Use the remove command or contact any of the server moderators in discord server.
+        </div>
+        <div style="border-top: var(--bs-card-border-width) solid var(--bs-card-border-color);" class="card-header">
+            Why Darkie stores this data?
+        </div>
+        <div class="card-body">
+            Darkie stores data:
+            <ul style="margin-top: 4px;" class="list-group">
+                <li class="list-group-item">to save server settings</li>
+                <li class="list-group-item">for global economy and badges in our community</li>
+                <li class="list-group-item">for Welcome & Leave Messages, Verify System and Ticket System
+                </li>
+            </ul>
+        </div>
+        <div style="border-top: var(--bs-card-border-width) solid var(--bs-card-border-color);" class="card-header">
+            How can I delete all my data?
+        </div>
+        <div class="card-body">
+            Join to support server and create a ticket. We are answering in less than 24 hours.
+        </div>
+        <div style="border-top: var(--bs-card-border-width) solid var(--bs-card-border-color);" class="card-header">
+            Privacy Policy doesn't answer my question. What should I do?
+        </div>
+        <div class="card-body">
+            Join to support server and ask us the question. Our community is very friendly!
+        </div>
+    </div>
+    <br><br>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
     crossorigin="anonymous"></script>
