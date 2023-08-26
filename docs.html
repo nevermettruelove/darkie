@@ -349,14 +349,15 @@
                     alt="" width="34" height="30" style="padding-right: 4px;" class="d-inline-block align-text-top">
                 <span class="docstext">Docs</span>
             </a>
-            <div style="margin-right: 12px; margin-top: -8px; margin-bottom: -8px; background-color: #2c2c2c; opacity: 100;"
+            <div style="margin-right: 12px; margin-top: -8px; margin-bottom: -8px; background-color: #2c2c2c; opacity: 100; width: 0.1px;"
                 class="vr"></div>
             <a href="./index.html">
                 <div title="Go Back" data-bs-toggle="tooltip" data-bs-custom-class="docversiontooltip"
                     class="gobackbutton"><i class="fa-solid fa-house"></i></div>
             </a>
             <span class="versionspan" style="font-size: 18px;" data-bs-toggle="tooltip"
-                data-bs-custom-class="docversiontooltip" data-bs-title="Documentation Version"><a>1.3</a></span>
+                data-bs-custom-class="docversiontooltip" data-bs-title="Documentation Version"><a>1.4 <i
+                        class="fa-brands fa-github"></i></a></span>
         </div>
     </nav>
     <div class="content" id="content">
@@ -793,6 +794,114 @@
                     </div>
                 </div>
                 <br>
+                <h3>Autorole System</h3>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEighteen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseEighteen" aria-expanded="false"
+                                aria-controls="collapseEighteen">
+                                <i class="fa-solid fa-circle-plus"></i>
+                                <div class="vr"></div>Autorole Roles
+                            </button>
+                        </h2>
+                        <div id="collapseEighteen" class="accordion-collapse collapse" aria-labelledby="headingEighteen"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Adds specific role to autorole system.
+                                <br>
+                                Syntax:
+                                <code>/autorole add &lt;role&gt;</code>
+                                <hr>
+                                Removes specific role from autorole system.
+                                <br>
+                                Syntax:
+                                <code>/autorole remove &lt;role&gt;</code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwenty">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
+                                <i class="fa-solid fa-table-list"></i>
+                                <div class="vr"></div>Autorole Roles List
+                            </button>
+                        </h2>
+                        <div id="collapseTwenty" class="accordion-collapse collapse" aria-labelledby="headingTwenty"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Shows autorole system roles list.
+                                <br>
+                                Syntax:
+                                <code>/autorole list</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h3>Automod System</h3>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwentyFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwentyFive" aria-expanded="false"
+                                aria-controls="collapseTwentyFive">
+                                <i class="fa-solid fa-circle-plus"></i>
+                                <div class="vr"></div>Automod Roles
+                            </button>
+                        </h2>
+                        <div id="collapseTwentyFive" class="accordion-collapse collapse"
+                            aria-labelledby="headingTwentyFive" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Adds specific admin role.
+                                <br>
+                                Syntax:
+                                <code>/automod adminroles add</code>
+                                <hr>
+                                Removes specific admin role.
+                                <br>
+                                Syntax:
+                                <code>/automod adminroles remove</code>
+                                <hr>
+                                Shows admin roles list.
+                                <br>
+                                Syntax:
+                                <code>/automod adminroles list</code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwentySeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwentySeven" aria-expanded="false"
+                                aria-controls="collapseTwentySeven">
+                                <i class="fa-solid fa-table-list"></i>
+                                <div class="vr"></div>Ignoring Channels
+                            </button>
+                        </h2>
+                        <div id="collapseTwentySeven" class="accordion-collapse collapse"
+                            aria-labelledby="headingTwentySeven" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Adds channel to ignoring list.
+                                <br>
+                                Syntax:
+                                <code>/setmod ignore_channels add</code>
+                                <hr>
+                                Removes channel from ignoring list.
+                                <br>
+                                Syntax:
+                                <code>/setmod ignore_channels remove</code>
+                                <hr>
+                                Shows ignored channel list.
+                                <br>
+                                Syntax:
+                                <code>/setmod ignore_channels remove</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
                 <h3>Verification System</h3>
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
@@ -839,127 +948,6 @@
                     </div>
                 </div>
                 <br>
-                <h3>Autorole System</h3>
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingEighteen">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseEighteen" aria-expanded="false"
-                                aria-controls="collapseEighteen">
-                                <i class="fa-solid fa-circle-plus"></i>
-                                <div class="vr"></div>Add Role to Autorole System
-                            </button>
-                        </h2>
-                        <div id="collapseEighteen" class="accordion-collapse collapse" aria-labelledby="headingEighteen"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Adds specific role to autorole system.
-                                <br>
-                                Syntax:
-                                <code>/autorole add &lt;role&gt;</code>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingNineteen">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseNineteen" aria-expanded="false"
-                                aria-controls="collapseNineteen">
-                                <i class="fa-solid fa-circle-minus"></i>
-                                <div class="vr"></div>Remove Role from Autorole System
-                            </button>
-                        </h2>
-                        <div id="collapseNineteen" class="accordion-collapse collapse" aria-labelledby="headingNineteen"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Removes specific role from autorole system.
-                                <br>
-                                Syntax:
-                                <code>/autorole remove &lt;role&gt;</code>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwenty">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
-                                <i class="fa-solid fa-table-list"></i>
-                                <div class="vr"></div>Autorole Roles List
-                            </button>
-                        </h2>
-                        <div id="collapseTwenty" class="accordion-collapse collapse" aria-labelledby="headingTwenty"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Shows autorole system roles list.
-                                <br>
-                                Syntax:
-                                <code>/autorole list</code>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <h3>Automod System</h3>
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwentyFive">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwentyFive" aria-expanded="false"
-                                aria-controls="collapseTwentyFive">
-                                <i class="fa-solid fa-circle-plus"></i>
-                                <div class="vr"></div>Add Role to Automod System
-                            </button>
-                        </h2>
-                        <div id="collapseTwentyFive" class="accordion-collapse collapse"
-                            aria-labelledby="headingTwentyFive" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Adds specific admin role.
-                                <br>
-                                Syntax:
-                                <code>/automod adminroles add</code>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwentySix">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwentySix" aria-expanded="false"
-                                aria-controls="collapseTwentySix">
-                                <i class="fa-solid fa-circle-minus"></i>
-                                <div class="vr"></div>Remove Role to Automod System
-                            </button>
-                        </h2>
-                        <div id="collapseTwentySix" class="accordion-collapse collapse"
-                            aria-labelledby="headingTwentySix" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Removes specific admin role.
-                                <br>
-                                Syntax:
-                                <code>/automod adminroles remove</code>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwentySeven">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwentySeven" aria-expanded="false"
-                                aria-controls="collapseTwentySeven">
-                                <i class="fa-solid fa-table-list"></i>
-                                <div class="vr"></div>Admin Roles List
-                            </button>
-                        </h2>
-                        <div id="collapseTwentySeven" class="accordion-collapse collapse"
-                            aria-labelledby="headingTwentySeven" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Shows admin roles list.
-                                <br>
-                                Syntax:
-                                <code>/automod adminroles list</code>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
                 <br>
                 <br>
                 <br>
@@ -971,7 +959,9 @@
                 <hr style="color: rgb(128, 128, 128);" class="hr hr-blurry" />
                 <span style="display: flex;">
                     <h3>Layout</h3>
-                    <p style="font-weight: 400; margin-left: 7px; color: #df4141;"><i class="fa-solid fa-computer"></i> / <a style="color: inherit; text-decoration: underline dotted #df4141;" href="https://en.wikipedia.org/wiki/Page_orientation">landscape mode</a> only</p>
+                    <p style="font-weight: 400; margin-left: 7px; color: #df4141;"><i class="fa-solid fa-computer"></i>
+                        / <a style="color: inherit; text-decoration: underline dotted #df4141;"
+                            href="https://en.wikipedia.org/wiki/Page_orientation">landscape mode</a> only</p>
                 </span>
                 <div style="background: #313131; padding: 10px; width: fit-content; border-radius: 15px;">
                     <div
