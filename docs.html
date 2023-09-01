@@ -97,26 +97,29 @@
 
     .homecontent,
     .commandcontent,
-    .settingscontent {
+    .settingscontent,
+    .changelogcontent {
         padding: 45px;
         padding-top: 30px;
-        overflow-y: auto;
+        overflow-y: scroll;
         overflow-x: hidden;
-        height: 100%;
+        max-height: calc(100% - 7px);
         scroll-behavior: smooth;
         animation: 0.6s contentanimation ease;
     }
 
     .homecontent p,
     .commandcontent p,
-    .settingscontent p {
+    .settingscontent p,
+    .changelogcontent p {
         color: #bdbdbd;
         font-weight: 300;
     }
 
     .homecontent li,
     .commandcontent li,
-    .settingscontent li {
+    .settingscontent li,
+    .changelogcontent li {
         color: #bdbdbd;
         font-weight: 300;
         font-family: 'Lexend Deca', sans-serif;
@@ -211,7 +214,8 @@
         text-decoration: underline dotted #4fffad;
     }
 
-    @media (orientation: portrait) {
+    @media (orientation: portrait),
+    (max-width: 905px) {
         .item p {
             margin-left: 3px;
             margin-right: 3px;
@@ -237,7 +241,8 @@
 
         .homecontent,
         .commandcontent,
-        .settingscontent {
+        .settingscontent,
+        .changelogcontent {
             height: calc(100% - (150px + 56px));
         }
     }
@@ -296,6 +301,11 @@
         padding-right: 16px;
     }
 
+    .accordion-body {
+        font-family: 'Lexend Deca', sans-serif;
+        font-weight: 300;
+    }
+
     .accordion-button i {
         display: flex;
         justify-content: center;
@@ -338,6 +348,31 @@
         background: #2c2c2c;
         border: 1px solid #3f3f3f;
     }
+
+    .flexcontainer {
+        display: flex;
+    }
+
+    .flexcontainer div {
+        flex: 1;
+        text-align: center;
+        font-family: 'Lexend Deca', sans-serif;
+        border-left: 1px solid #49574c;
+        padding: 1rem 1rem;
+        font-size: 1.75rem;
+        line-height: 0.75;
+        font-weight: 400;
+    }
+
+    .flexcontainer span {
+        padding-top: 0.4rem;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .changelogaccordion .accordion-item .accordion-collapse .accordion-body {
+        padding: 0;
+    }
 </style>
 
 <body>
@@ -356,7 +391,7 @@
                     class="gobackbutton"><i class="fa-solid fa-house"></i></div>
             </a>
             <span class="versionspan" style="font-size: 18px;" data-bs-toggle="tooltip"
-                data-bs-custom-class="docversiontooltip" data-bs-title="Documentation Version"><a>1.4 <i
+                data-bs-custom-class="docversiontooltip" data-bs-title="Documentation Version"><a>1.5 <i
                         class="fa-brands fa-github"></i></a></span>
         </div>
     </nav>
@@ -368,6 +403,9 @@
             <hr style="margin: 5px 0" />
             <div style="margin-top: 5px;" id="commandbutton" class="item">
                 <p><i class="fa-solid fa-terminal"></i><a>Commands</a></p>
+            </div>
+            <div style="margin-top: 5px;" id="changelogbutton" class="item">
+                <p><i class="fa-solid fa-timeline"></i><a>Changelog</a></p>
             </div>
             <div style="margin-top: 5px;" id="settingsbutton" class="item">
                 <p><i class="fa-solid fa-gears"></i><a>Settings</a></p>
@@ -953,6 +991,324 @@
                 <br>
                 <br>
             </div>
+            <div style="display: none;" class="changelogcontent">
+                <h1>Changelog</h1>
+                <p>See the updates Darkie had.</p>
+                <hr style="color: rgb(128, 128, 128);" class="hr hr-blurry" />
+                <h3>Release</h3>
+                <div class="accordion changelogaccordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwentyEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwentyEight" aria-expanded="false"
+                                aria-controls="collapseTwentyEight">
+                                31.08.2023
+                            </button>
+                        </h2>
+                        <div id="collapseTwentyEight" class="accordion-collapse collapse"
+                            aria-labelledby="headingTwentyEight" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Added
+                                        <br>
+                                        <span>Leveling System and Global Reputation System</span>
+                                    </div>
+                                    <div>
+                                        Fixed
+                                        <br>
+                                        <span>Suggestion Channel System</span>
+                                    </div>
+                                    <div>
+                                        Changed
+                                        <br>
+                                        <span>
+                                            <code>user</code>, <code>server</code>, <code>xp</code>, <code>8ball</code>
+                                            Output Design
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwentyNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwentyNine" aria-expanded="false"
+                                aria-controls="collapseTwentyNine">
+                                27.08.2023
+                            </button>
+                        </h2>
+                        <div id="collapseTwentyNine" class="accordion-collapse collapse"
+                            aria-labelledby="headingTwentyNine" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Added
+                                        <br>
+                                        <span>Leveling System</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThirty">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThirty" aria-expanded="false" aria-controls="collapseThirty">
+                                26.08.2023
+                            </button>
+                        </h2>
+                        <div id="collapseThirty" class="accordion-collapse collapse" aria-labelledby="headingThirty"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Added
+                                        <br>
+                                        <span>Ignore Channel Option in Automod
+                                            <code>/setmod ignore_channels</code></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThirtyOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThirtyOne" aria-expanded="false"
+                                aria-controls="collapseThirtyOne">
+                                25.08.2023
+                            </button>
+                        </h2>
+                        <div id="collapseThirtyOne" class="accordion-collapse collapse"
+                            aria-labelledby="headingThirtyOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Added
+                                        <br>
+                                        <span>Premium Commands and Suggestion Channel Function</span>
+                                    </div>
+                                    <div>
+                                        Fixed
+                                        <br>
+                                        <span>Autoroles</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h3>Public Beta</h3>
+                <div class="accordion changelogaccordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThirtyTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThirtyTwo" aria-expanded="false"
+                                aria-controls="collapseThirtyTwo">
+                                18.06.2023
+                            </button>
+                        </h2>
+                        <div id="collapseThirtyTwo" class="accordion-collapse collapse"
+                            aria-labelledby="headingThirtyTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Added
+                                        <br>
+                                        <span><code>/8ball</code> Command</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThirtyThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThirtyThree" aria-expanded="false"
+                                aria-controls="collapseThirtyThree">
+                                14.06.2023
+                            </button>
+                        </h2>
+                        <div id="collapseThirtyThree" class="accordion-collapse collapse"
+                            aria-labelledby="headingThirtyThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Added
+                                        <br>
+                                        <span><code>/roles</code> Command</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThirtyFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThirtyFour" aria-expanded="false"
+                                aria-controls="collapseThirtyFour">
+                                05.06.2023
+                            </button>
+                        </h2>
+                        <div id="collapseThirtyFour" class="accordion-collapse collapse"
+                            aria-labelledby="headingThirtyFour" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Fixed
+                                        <br>
+                                        <span>Autoroles</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThirtyFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThirtyFive" aria-expanded="false"
+                                aria-controls="collapseThirtyFive">
+                                03.06.2023
+                            </button>
+                        </h2>
+                        <div id="collapseThirtyFive" class="accordion-collapse collapse"
+                            aria-labelledby="headingThirtyFive" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Added
+                                        <br>
+                                        <span><code>/roll</code> Command and Cooldowns in Commands</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThirtySix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThirtySix" aria-expanded="false"
+                                aria-controls="collapseThirtySix">
+                                02.06.2023
+                            </button>
+                        </h2>
+                        <div id="collapseThirtySix" class="accordion-collapse collapse"
+                            aria-labelledby="headingThirtySix" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Added
+                                        <br>
+                                        <span>More 4Fun Commands, Bot Site and <code>/help</code> Command</span>
+                                    </div>
+                                    <div>
+                                        Changed
+                                        <br>
+                                        <span><code>/kick</code> Description</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThirtySeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThirtySeven" aria-expanded="false"
+                                aria-controls="collapseThirtySeven">
+                                08.05.2023
+                            </button>
+                        </h2>
+                        <div id="collapseThirtySeven" class="accordion-collapse collapse"
+                            aria-labelledby="headingThirtySeven" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Added
+                                        <br>
+                                        <span><code>/banlist</code> Command</span>
+                                    </div>
+                                    <div>
+                                        Changed
+                                        <br>
+                                        <span>Displaying Commands by Permissions</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThirtyEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThirtyEight" aria-expanded="false"
+                                aria-controls="collapseThirtyEight">
+                                16.04.2023
+                            </button>
+                        </h2>
+                        <div id="collapseThirtyEight" class="accordion-collapse collapse"
+                            aria-labelledby="headingThirtyEight" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Added
+                                        <br>
+                                        <span><code>/kiss</code>, <code>/slap</code> and <code>/hug</code>
+                                            Command</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThirtyNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThirtyNine" aria-expanded="false"
+                                aria-controls="collapseThirtyNine">
+                                04.04.2023
+                            </button>
+                        </h2>
+                        <div id="collapseThirtyNine" class="accordion-collapse collapse"
+                            aria-labelledby="headingThirtyNine" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Added
+                                        <br>
+                                        <span><code>/set autorole commands</code> Command</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingForty">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseForty" aria-expanded="false" aria-controls="collapseForty">
+                                02.04.2023
+                            </button>
+                        </h2>
+                        <div id="collapseForty" class="accordion-collapse collapse" aria-labelledby="headingForty"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Added
+                                        <br>
+                                        <span><code>/set welcome commands</code>, <code>/set leave commands</code> and <code>/setmod verify commands</code> Command</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
             <div style="display: none;" class="settingscontent">
                 <h1>Settings</h1>
                 <p>Customize docs to your preference.</p>
@@ -1042,6 +1398,29 @@
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
 <script>
+    for (const a of document.querySelectorAll(".flexcontainer div")) {
+        if (a.textContent.includes("Added")) {
+            const div = document.createElement('div');
+            div.innerHTML = `<i class="fa-solid fa-square-plus"></i>`;
+            div.style.borderLeft = "none";
+            div.style.padding = "0.2rem 0.2rem 0.4rem 0.2rem";
+            a.insertBefore(div, a.firstChild);
+        }
+        if (a.textContent.includes("Fixed")) {
+            const div = document.createElement('div');
+            div.innerHTML = `<i class="fa-solid fa-wrench"></i>`;
+            div.style.borderLeft = "none";
+            div.style.padding = "0.2rem 0.2rem 0.4rem 0.2rem";
+            a.insertBefore(div, a.firstChild);
+        }
+        if (a.textContent.includes("Changed")) {
+            const div = document.createElement('div');
+            div.innerHTML = `<i class="fa-solid fa-wand-magic-sparkles"></i>`;
+            div.style.borderLeft = "none";
+            div.style.padding = "0.2rem 0.2rem 0.4rem 0.2rem";
+            a.insertBefore(div, a.firstChild);
+        }
+    }
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     const currentPage = localStorage.getItem("currentPage");
@@ -1109,11 +1488,19 @@
         $("#settingsbutton p").addClass('p-clicked');
         $(".settingscontent").css("display", "block");
     }
+    if (currentPage === "Changelog") {
+        $("#changelogbutton").addClass('clicked');
+        $("#changelogbutton p").addClass('p-clicked');
+        $(".changelogcontent").css("display", "block");
+    }
     $("#homebutton").click(function () {
         localStorage.setItem("currentPage", "Home");
         $("#homebutton").addClass('clicked');
         $("#homebutton p").addClass('p-clicked');
         $(".homecontent").css("display", "block");
+        $("#changelogbutton").removeClass('clicked');
+        $("#changelogbutton p").removeClass('p-clicked');
+        $(".changelogcontent").css("display", "none");
         $("#settingsbutton").removeClass('clicked');
         $("#settingsbutton p").removeClass('p-clicked');
         $(".settingscontent").css("display", "none");
@@ -1126,6 +1513,9 @@
         $("#commandbutton").addClass('clicked');
         $("#commandbutton p").addClass('p-clicked');
         $(".commandcontent").css("display", "block");
+        $("#changelogbutton").removeClass('clicked');
+        $("#changelogbutton p").removeClass('p-clicked');
+        $(".changelogcontent").css("display", "none");
         $("#settingsbutton").removeClass('clicked');
         $("#settingsbutton p").removeClass('p-clicked');
         $(".settingscontent").css("display", "none");
@@ -1138,6 +1528,24 @@
         $("#settingsbutton").addClass('clicked');
         $("#settingsbutton p").addClass('p-clicked');
         $(".settingscontent").css("display", "block");
+        $("#changelogbutton").removeClass('clicked');
+        $("#changelogbutton p").removeClass('p-clicked');
+        $(".changelogcontent").css("display", "none");
+        $("#commandbutton").removeClass('clicked');
+        $("#commandbutton p").removeClass('p-clicked');
+        $(".commandcontent").css("display", "none");
+        $("#homebutton").removeClass('clicked');
+        $("#homebutton p").removeClass('p-clicked');
+        $(".homecontent").css("display", "none");
+    });
+    $("#changelogbutton").click(function () {
+        localStorage.setItem("currentPage", "Changelog");
+        $("#changelogbutton").addClass('clicked');
+        $("#changelogbutton p").addClass('p-clicked');
+        $(".changelogcontent").css("display", "block");
+        $("#settingsbutton").removeClass('clicked');
+        $("#settingsbutton p").removeClass('p-clicked');
+        $(".settingscontent").css("display", "none");
         $("#commandbutton").removeClass('clicked');
         $("#commandbutton p").removeClass('p-clicked');
         $(".commandcontent").css("display", "none");
