@@ -21,6 +21,60 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <style>
+    @keyframes rainbowanimation {
+        0% {
+            color: rgb(255, 100, 100);
+        }
+
+        8% {
+            color: rgb(255, 185, 115);
+        }
+
+        16% {
+            color: rgb(255, 255, 119);
+        }
+
+        25% {
+            color: rgb(185, 255, 115);
+        }
+
+        33% {
+            color: rgb(127, 255, 127);
+        }
+
+        41% {
+            color: rgb(122, 255, 189);
+        }
+
+        50% {
+            color: rgb(121, 255, 255);
+        }
+
+        58% {
+            color: rgb(118, 187, 255);
+        }
+
+        66% {
+            color: rgb(113, 113, 255);
+        }
+
+        75% {
+            color: rgb(183, 110, 255);
+        }
+
+        83% {
+            color: rgb(255, 113, 255);
+        }
+
+        91% {
+            color: rgb(255, 114, 185);
+        }
+
+        100% {
+            color: rgb(255, 100, 100);
+        }
+    }
+
     body {
         background-color: #242424;
         font-family: 'Lexend Deca', sans-serif;
@@ -205,6 +259,12 @@
     .botIcon {
         height: 65px;
     }
+
+    .rainbowtext {
+        color: #ff3366;
+        animation: rainbowanimation 4.5s infinite;
+        font-weight: 400;
+    }
 </style>
 
 <body>
@@ -237,7 +297,20 @@
             </div>
         </div>
     </nav>
-    <h1 style="text-align: center; margin-top: 8px;">Features</h1>
+    <center>
+        <h3
+            style="font-weight: 200; margin-top: 16px; padding: 10px 30px; background: rgba(0, 0, 0, 0.15); border-radius: 30px; width: fit-content;">
+            Now on <a class="rainbowtext" href="https://top.gg/bot/1055863936660025484"><svg viewBox="120 120 580 580"
+                    focusable="false" style="width: calc(1.3rem + .6vw); margin-right: 0.093em;">
+                    <path fill="currentColor"
+                        d="M655.711 247H330.71V572H397.113C422.599 572 447.042 561.876 465.064 543.854C483.086 525.832 493.21 501.389 493.21 475.902V409.5H559.613C585.099 409.5 609.542 399.375 627.564 381.354C645.586 363.332 655.711 338.889 655.711 313.402V247Z">
+                    </path>
+                    <path fill="currentColor"
+                        d="M144 247H306.5V409.5H193.657C180.531 409.5 167.943 404.286 158.661 395.004C149.379 385.722 144.165 373.134 144.165 360.008L144 247Z">
+                    </path>
+                </svg>top.gg</a>!</h3>
+    </center>
+    <h1 style="text-align: center;">Features</h1>
     <div style="display: flex; justify-content: center; flex-wrap: wrap;">
         <div class="features-container">
             <div class="card card1">
