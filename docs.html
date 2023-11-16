@@ -21,10 +21,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <style>
+    @keyframes versionAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .syntax-content-example-code1 {
+        background-color: #4fffad;
+    }
+
     body {
         background-color: #242424;
         overflow: hidden;
         min-height: 100%;
+    }
+
+    .syntaxVariable1 {
+        margin: 1px;
+        border-radius: 6px;
+    }
+
+    .syntaxBackground {
+        background-color: rgba(104, 241, 235, 0.15);
+    }
+
+    .syntaxBackground1 {
+        background-color: rgba(104, 202, 241, 0.85);
     }
 
     p,
@@ -35,6 +66,22 @@
         font-family: 'Lexend Deca', sans-serif;
         color: white;
         text-decoration: none;
+    }
+
+    h1 {
+        background: #2c2c2c;
+        box-shadow: inset 0 0 0 1px #3f3f3f;
+        border-radius: 10px;
+        width: fit-content;
+        padding: 5px 12px;
+    }
+
+    h3 {
+        background: rgba(0, 0, 0, 0.15);
+        box-shadow: inset 0 0 0 1px #131313;
+        border-radius: 10px;
+        width: fit-content;
+        padding: 5px 12px;
     }
 
     @keyframes contentanimation {
@@ -158,22 +205,26 @@
     }
 
     .versionspan a {
-        background: linear-gradient(90deg, rgb(53, 214, 201), rgb(44, 226, 126));
+        background: linear-gradient(90deg, rgb(116, 215, 233), rgb(140, 238, 60));
         font-weight: 600;
         background-clip: inherit;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        background-size: 250% 250%;
         text-shadow: 0px 0px 6px rgba(79, 255, 240, 0.4), 0px 0px 13px rgba(79, 170, 255, 0.3);
+        animation: versionAnimation 1.65s ease infinite;
     }
 
     .docstext {
         margin-left: 2px;
-        background: -webkit-linear-gradient(90deg, rgb(69, 236, 186), rgb(141, 255, 96));
+        background: linear-gradient(90deg, rgb(116, 215, 233), rgb(140, 238, 60));
         font-weight: 600;
         background-clip: inherit;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        background-size: 250% 250%;
         text-shadow: 0px 0px 6px rgba(79, 255, 240, 0.4), 0px 0px 13px rgba(79, 170, 255, 0.3);
+        animation: versionAnimation 1.65s ease infinite;
     }
 
     .docversiontooltip {
@@ -223,6 +274,112 @@
             padding: 4px;
             padding-top: 2px;
             padding-bottom: 2px;
+        }
+
+        .flexcontainer {
+            flex-direction: column;
+        }
+
+        .flexcontainer>div {
+            border-top: 1px solid #49574c;
+        }
+
+        .flexcontainer div {
+            border-left: none;
+        }
+
+        .height10 {
+            height: 4px !important;
+        }
+
+        .height8 {
+            height: 4px !important;
+        }
+
+        .height9 {
+            height: 3px !important;
+        }
+
+        .margint10 {
+            margin-top: 5px !important;
+        }
+
+        .syntax-content-example-text {
+            width: 80px !important;
+        }
+
+        .syntax-content-example-text1 {
+            width: 25px !important;
+        }
+
+        .syntax-content-example-accordion {
+            height: 35px !important;
+            width: 155px !important;
+            padding-left: 4px !important;
+        }
+
+        .syntax-content-text {
+            margin-top: 5px !important;
+        }
+
+        .syntax-content-example {
+            padding: 6px !important;
+        }
+
+        .settings-syntax-content {
+            padding: 8px !important;
+        }
+
+        .settings-syntax-content hr {
+            margin: 0.5rem 0 0.5rem;
+        }
+
+        .syntax-content-example .sidebar {
+            height: 100px !important;
+            width: 175px !important;
+        }
+
+        .settings-layout-content {
+            padding: 8px !important;
+        }
+
+        .layout-content-example .sidebar {
+            height: 100px !important;
+            width: 175px !important;
+        }
+
+        .layout-content-example {
+            padding: 6px !important;
+        }
+
+        .settings-layout-content {
+            padding: 8px !important;
+        }
+
+        .settings-layout-content div:nth-child(1),
+        .settings-layout-content div:nth-child(5),
+        .settings-layout-content div:nth-child(6) {
+            width: 25px !important;
+            height: 4px !important;
+        }
+
+        .settings-layout-content div:nth-child(4) {
+            width: 20px !important;
+            height: 3px !important;
+        }
+
+        .settings-layout-content div:nth-child(2) {
+            width: 60px !important;
+            height: 4px !important;
+        }
+
+        .settings-layout-content div:nth-child(7) {
+            width: 35px !important;
+            height: 4px !important;
+        }
+
+        .settings-layout-content hr {
+            margin: 0.5rem 0 0.5rem;
         }
 
         .contentfield {
@@ -290,7 +447,7 @@
     }
 
     code {
-        padding: 3px 5px 3px 5px;
+        padding: 7px 9px 7px 9px;
         background: #05130b;
         border-radius: 8px;
         color: #4fffad;
@@ -373,6 +530,10 @@
     .changelogaccordion .accordion-item .accordion-collapse .accordion-body {
         padding: 0;
     }
+
+    #contentfield div h1 {
+        color: #4fffad;
+    }
 </style>
 
 <body>
@@ -391,7 +552,7 @@
                     class="gobackbutton"><i class="fa-solid fa-house"></i></div>
             </a>
             <span class="versionspan" style="font-size: 18px;" data-bs-toggle="tooltip"
-                data-bs-custom-class="docversiontooltip" data-bs-title="Documentation Version"><a>1.5 <i
+                data-bs-custom-class="docversiontooltip" data-bs-title="Documentation Version"><a>1.6 <i
                         class="fa-brands fa-github"></i></a></span>
         </div>
     </nav>
@@ -414,14 +575,14 @@
         <div class="contentfield" id="contentfield"
             style="flex: 4; border-left: 1px solid #2c2c2c; height: 100vh; background: #202020;">
             <div style="display: none;" class="homecontent">
-                <h1>Home</h1>
+                <h1><i class="fa-solid fa-bars"></i> Home</h1>
                 <p>
                     Welcome to <span style="margin-left: 0;" class="docstext">Darkie Docs</span>. Here
                     you will find information about Darkie Bot.
                     On left side, you can navigate through docs to see their contents.
                 </p>
                 <hr style="color: rgb(128, 128, 128);" class="hr hr-blurry" />
-                <h3>Introduction</h3>
+                <h3><i class="fa-solid fa-circle-question"></i> Introduction</h3>
                 <p>
                     Darkie Bot is powerful discord bot used for moderating your server & more. It can be used for:
                     <li style="color: #d36d6d;">moderating your server</li>
@@ -430,17 +591,21 @@
                     <li style="color: #d3a36d;">communicating with friends through 4fun commands</li>
                     <li style="color: #6dd3a8;">assigning roles through the autorole system</li>
                     <li style="color: #806dd3;">getting server information</li>
-                    <li style="color: #ccd36d;">verifying users with verification system</li>
+                    <li style="color: #ccd36d;">verifying users with verification system and many more!</li>
                 </p>
-                <p>To make these features work, check commands!</p>
+                <p>Check commands to make these features work for your server.
+                    <br>You can check changelogs to see all Darkie Bot changes.
+                </p>
+                <br>
+                <br>
             </div>
             <div style="display: none;" class="commandcontent">
-                <h1>Commands</h1>
+                <h1><i class="fa-solid fa-terminal"></i> Commands</h1>
                 <p>
                     Darkie Bot has a lot of features, that can be customized. Use commands to change them as you like!
                 </p>
                 <hr style="color: rgb(128, 128, 128);" class="hr hr-blurry" />
-                <h3>Moderation</h3>
+                <h3><i class="fa-solid fa-user-shield"></i> Moderation</h3>
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
@@ -510,7 +675,7 @@
                                 Mutes specific user.
                                 <br>
                                 Syntax:
-                                <code>/kick &lt;user&gt; &lt;time&gt; &lt;reason&gt;</code>
+                                <code>/mute &lt;user&gt; &lt;time&gt; &lt;reason&gt;</code>
                             </div>
                         </div>
                     </div>
@@ -571,7 +736,7 @@
                     </div>
                 </div>
                 <br>
-                <h3>4Fun</h3>
+                <h3><i class="fa-solid fa-face-laugh-beam"></i> 4Fun</h3>
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingSeven">
@@ -590,7 +755,8 @@
                                 <code>kiss, punch, hug, slap, tickle, stare, happy, sad, cheers, bite, pat</code>.
                                 <br>
                                 Syntax:
-                                <code>/stare &lt;user&gt;</code>
+                                <code
+                                    class="reactionAnimation"><span class="reactionAnimation1">/stare</span> &lt;user&gt;</code>
                             </div>
                         </div>
                     </div>
@@ -654,7 +820,7 @@
                     </div>
                 </div>
                 <br>
-                <h3>Information</h3>
+                <h3><i class="fa-solid fa-circle-info"></i> Information</h3>
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingEight">
@@ -767,7 +933,7 @@
                     </div>
                 </div>
                 <br>
-                <h3>Welcome and Leave System</h3>
+                <h3><i class="fa-solid fa-message"></i> Welcome and Leave</h3>
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFourteen">
@@ -832,7 +998,7 @@
                     </div>
                 </div>
                 <br>
-                <h3>Autorole System</h3>
+                <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Autorole</h3>
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingEighteen">
@@ -878,7 +1044,7 @@
                     </div>
                 </div>
                 <br>
-                <h3>Automod System</h3>
+                <h3><i class="fa-solid fa-shield"></i> Automod</h3>
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwentyFive">
@@ -940,20 +1106,20 @@
                     </div>
                 </div>
                 <br>
-                <h3>Verification System</h3>
+                <h3><i class="fa-solid fa-magnifying-glass"></i> Verification</h3>
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingSixteen">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
                                 <i class="fa-solid fa-shield"></i>
-                                <div class="vr"></div>Create Verification System
+                                <div class="vr"></div>Enable Verification System
                             </button>
                         </h2>
                         <div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                Creates verification system.
+                                Enables verification system.
                                 <br>
                                 Syntax:
                                 <code>/automod verify create &lt;message&gt; &lt;role&gt; &lt;channel&gt; &lt;embed&gt;</code>
@@ -971,13 +1137,13 @@
                                 data-bs-target="#collapseSeventeen" aria-expanded="false"
                                 aria-controls="collapseSeventeen">
                                 <i class="fa-solid fa-shield-halved"></i>
-                                <div class="vr"></div>Remove Verification System
+                                <div class="vr"></div>Disable Verification System
                             </button>
                         </h2>
                         <div id="collapseSeventeen" class="accordion-collapse collapse"
                             aria-labelledby="headingSeventeen" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                Removes server's verification system.
+                                Disables verification system.
                                 <br>
                                 Syntax:
                                 <code>/automod verify remove</code>
@@ -992,11 +1158,101 @@
                 <br>
             </div>
             <div style="display: none;" class="changelogcontent">
-                <h1>Changelog</h1>
-                <p>See the updates Darkie had.</p>
+                <h1><i class="fa-solid fa-timeline"></i> Changelog</h1>
+                <p>See the updates Darkie Bot had.</p>
                 <hr style="color: rgb(128, 128, 128);" class="hr hr-blurry" />
-                <h3>Release</h3>
+                <h3><i style="color: yellow;" class="fa-solid fa-star"></i> Release</h3>
                 <div class="accordion changelogaccordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFortyTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFortyTwo" aria-expanded="false"
+                                aria-controls="collapseFortyTwo">
+                                07.11.2023
+                            </button>
+                        </h2>
+                        <div id="collapseFortyTwo" class="accordion-collapse collapse" aria-labelledby="headingFortyTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Added
+                                        <br>
+                                        <span>
+                                            AFK System
+                                        </span>
+                                    </div>
+                                    <div>
+                                        Changed
+                                        <br>
+                                        <span>
+                                            <code>/server</code> Features
+                                        </span>
+                                    </div>
+                                    <div>
+                                        Fixed
+                                        <br>
+                                        <span>
+                                            AFK System Bugs
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFortyOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFortyOne" aria-expanded="false"
+                                aria-controls="collapseFortyOne">
+                                05.11.2023
+                            </button>
+                        </h2>
+                        <div id="collapseFortyOne" class="accordion-collapse collapse" aria-labelledby="headingFortyOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Added
+                                        <br>
+                                        <span>
+                                            Anti-Link System
+                                        </span>
+                                    </div>
+                                    <div>
+                                        Changed
+                                        <br>
+                                        <span>
+                                            Anti-Invite System
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwentyNinth">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwentyNinth" aria-expanded="false"
+                                aria-controls="collapseTwentyNinth">
+                                25.10.2023
+                            </button>
+                        </h2>
+                        <div id="collapseTwentyNinth" class="accordion-collapse collapse"
+                            aria-labelledby="headingTwentyNinth" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Changed
+                                        <br>
+                                        <span>
+                                            Revamped Code
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwentyEight">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -1012,7 +1268,7 @@
                                     <div style="border-left: none;">
                                         Added
                                         <br>
-                                        <span>Leveling System and Global Reputation System</span>
+                                        <span>Global Reputation System</span>
                                     </div>
                                     <div>
                                         Fixed
@@ -1067,7 +1323,7 @@
                                         Added
                                         <br>
                                         <span>Ignore Channel Option in Automod
-                                            <code>/setmod ignore_channels</code></span>
+                                            <br><code>/setmod ignore_channels</code></span>
                                     </div>
                                 </div>
                             </div>
@@ -1101,7 +1357,7 @@
                     </div>
                 </div>
                 <br>
-                <h3>Public Beta</h3>
+                <h3><i style="color: lightskyblue;" class="fa-solid fa-flask"></i> Public Beta</h3>
                 <div class="accordion changelogaccordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThirtyTwo">
@@ -1296,7 +1552,8 @@
                                     <div style="border-left: none;">
                                         Added
                                         <br>
-                                        <span><code>/set welcome commands</code>, <code>/set leave commands</code> and <code>/setmod verify commands</code> Command</span>
+                                        <span><code>/set welcome commands</code>, <code>/set leave commands</code> and
+                                            <code>/setmod verify commands</code> Command</span>
                                     </div>
                                 </div>
                             </div>
@@ -1310,23 +1567,24 @@
                 <br>
             </div>
             <div style="display: none;" class="settingscontent">
-                <h1>Settings</h1>
+                <h1><i class="fa-solid fa-gears"></i> Settings</h1>
                 <p>Customize docs to your preference.</p>
                 <hr style="color: rgb(128, 128, 128);" class="hr hr-blurry" />
                 <span style="display: flex;">
-                    <h3>Layout</h3>
-                    <p style="font-weight: 400; margin-left: 7px; color: #df4141;"><i class="fa-solid fa-computer"></i>
-                        / <a style="color: inherit; text-decoration: underline dotted #df4141;"
+                    <h3><i class="fa-solid fa-border-top-left"></i> Layout</h3>
+                    <p style="font-weight: 400; margin-left: 7px; color: #df4141;"><i
+                            class="fa-solid fa-triangle-exclamation"></i> <a
+                            style="color: inherit; text-decoration: underline dotted #df4141;"
                             href="https://en.wikipedia.org/wiki/Page_orientation">landscape mode</a> only</p>
                 </span>
-                <div style="background: #313131; padding: 10px; width: fit-content; border-radius: 15px;">
-                    <div
+                <div class="layout-content-example"
+                    style="background: #313131; padding: 10px; width: fit-content; border-radius: 15px;">
+                    <div class="sidebar"
                         style="overflow: hidden; display: flex; background: #202020; height: 200px; width: 350px; border-radius: 12px;">
                         <div style="flex: 1; background-color: #242424; border-right: 1px solid #2c2c2c;"></div>
-                        <div
+                        <div class="settings-layout-content"
                             style="flex: 4; background-color: #202020; overflow: hidden; font-size: 8px; padding: 15px;">
-                            <div
-                                style="background-color: rgb(199, 199, 199); width: 50px; height: 10px; border-radius: 3px;">
+                            <div style="background-color: #4fffad; width: 50px; height: 10px; border-radius: 3px;">
                             </div>
                             <div
                                 style="background-color: rgb(87, 87, 87); margin-top: 10px; width: 120px; height: 10px; border-radius: 3px;">
@@ -1353,13 +1611,13 @@
                         <p style="margin-bottom: 0;">Right Side</p>
                     </label>
                 </div>
-                <div style="background: #313131; padding: 10px; width: fit-content; border-radius: 15px;">
-                    <div
+                <div class="layout-content-example"
+                    style="background: #313131; padding: 10px; width: fit-content; border-radius: 15px;">
+                    <div class="sidebar"
                         style="overflow: hidden; display: flex; background: #202020; height: 200px; width: 350px; border-radius: 12px;">
-                        <div
+                        <div class="settings-layout-content"
                             style="flex: 4; background-color: #202020; overflow: hidden; font-size: 8px; padding: 15px;">
-                            <div
-                                style="background-color: rgb(199, 199, 199); width: 50px; height: 10px; border-radius: 3px;">
+                            <div style="background-color: #4fffad; width: 50px; height: 10px; border-radius: 3px;">
                             </div>
                             <div
                                 style="background-color: rgb(87, 87, 87); margin-top: 10px; width: 120px; height: 10px; border-radius: 3px;">
@@ -1387,6 +1645,66 @@
                         <p style="margin-bottom: 0;">Left Side</p>
                     </label>
                 </div>
+                <br>
+                <h3><i class="fa-solid fa-highlighter"></i> Syntax</h3>
+                <div class="syntax-content-example"
+                    style="background: #313131; padding: 10px; width: fit-content; border-radius: 15px;">
+                    <div class="sidebar"
+                        style="overflow: hidden; display: flex; background: #202020; height: 200px; width: 350px; border-radius: 12px;">
+                        <div class="settings-syntax-content"
+                            style="flex: 4; background-color: #202020; overflow: hidden; font-size: 8px; padding: 15px;">
+                            <div class="height10"
+                                style="background-color: #4fffad; width: 50px; height: 10px; border-radius: 3px;">
+                            </div>
+                            <div class="height10"
+                                style="background-color: rgb(87, 87, 87); margin-top: 10px; width: 120px; height: 10px; border-radius: 3px;">
+                            </div>
+                            <hr>
+                            <div class="height9"
+                                style="background-color: rgb(199, 199, 199); margin-top: 10px; width: 40px; height: 9px; border-radius: 3px;">
+                            </div>
+                            <br>
+                            <div class="syntax-content-example-accordion"
+                                style="background-color: #212926; padding-left: 10px; border: 1px solid #49574c; width: 220px; height: 70px; border-radius: 3px;">
+                                <div class="syntax-content-example-text height10 margint10"
+                                    style="background-color: #a1ceb8; margin-top: 10px; width: 160px; height: 10px; border-radius: 3px;">
+                                </div>
+                                <div class="syntax-content-text"
+                                    style="display: flex; align-items: center; margin-top: 10px;">
+                                    <div class="syntax-content-example-text1 height10"
+                                        style="background-color: #a1ceb8; width: 40px; height: 10px; border-radius: 3px; margin-right: 2px;">
+                                    </div>
+                                    <div class="syntax-content-example-text2 height10"
+                                        style="background-color: #a1ceb8; width: 5px; height: 10px; border-radius: 3px;">
+                                    </div>
+                                    <div class="syntax-content-example-code"
+                                        style="background-color: #05130b; display: flex; align-items: center; margin-left: 6px; width: fit-content; height: 16px; border-radius: 3px;">
+                                        <div class="syntax-content-example-code1 height8"
+                                            style="margin: 5px 5px 5px 5px; width: 22px; height: 8px; border-radius: 2px;">
+                                        </div>
+                                        <div class="syntax-content-example-code1 height8"
+                                            style="margin: 5px 1px 5px 0; width: 8px; height: 8px; border-radius: 2px;">
+                                        </div>
+                                        <div class="syntax-content-example-code1 height8 syntaxThing"
+                                            style="margin: 0px 1px 0px 0; width: 22px; height: 8px; transition: 0.25s; border-radius: 2px;">
+                                        </div>
+                                        <div class="syntax-content-example-code1 height8"
+                                            style="margin: 5px 5px 5px 0; width: 8px; height: 8px; border-radius: 2px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-check form-switch" style="margin: 10px;">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault1">
+                    <label class="form-check-label" for="flexSwitchCheckDefault1">
+                        <p style="margin-bottom: 0;">Off</p>
+                    </label>
+                </div>
+                <br>
+                <br>
             </div>
             <br>
         </div>
@@ -1398,6 +1716,45 @@
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
 <script>
+    var syntaxElements = document.querySelectorAll("code");
+    syntaxElements.forEach(checkSyntax);
+    const reactions = ['kiss', 'punch', 'hug', 'slap', 'tickle', 'stare', 'happy', 'sad', 'cheers', 'bite', 'pat'];
+    var reactionElement = document.querySelector(".reactionAnimation");
+    var reaction = 0;
+    var reactionString = "user";
+    setInterval(function () {
+        if (reaction < 10) {
+            reaction++;
+        }
+        else {
+            reaction = 0;
+        }
+        if (syntaxState == 'true') {
+            reactionString = "<span class='syntaxVariable1 syntaxBackground'>user</span>";
+        }
+        if (syntaxState == 'false') {
+            reactionString = "user";
+        }
+        console.log(reactionString);
+        reactionElement.innerHTML = "/" + reactions[reaction] + " &lt;" + reactionString + "&gt;";
+    }, 350);
+    function checkSyntax(code) {
+        if (code.textContent.indexOf("/") > -1) {
+            if (code.textContent.indexOf("<") > 0) {
+                var commandVariable = code.textContent.substring(code.textContent.indexOf("<") - 1).replaceAll('<', "&lt;").replaceAll('>', "&gt;").replaceAll('&lt;', '&lt;<span class="syntaxVariable1">').replaceAll('&gt;', "</span>&gt;")
+            }
+            else {
+                commandVariable = "";
+            }
+            if (code.textContent.indexOf("<") > 0) {
+                var otherText = code.textContent.substring(0, code.textContent.indexOf("<") - 1);
+            }
+            else {
+                var otherText = code.textContent;
+            }
+            code.innerHTML = otherText + "<span class='syntaxVariable'>" + commandVariable + "</span>";
+        }
+    }
     for (const a of document.querySelectorAll(".flexcontainer div")) {
         if (a.textContent.includes("Added")) {
             const div = document.createElement('div');
@@ -1425,6 +1782,26 @@
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     const currentPage = localStorage.getItem("currentPage");
     const currentLayout = localStorage.getItem("currentLayout");
+    var syntaxState = localStorage.getItem("syntaxState");
+    if (syntaxState == null) {
+        localStorage.setItem("syntaxState", "true");
+        document.getElementById("flexSwitchCheckDefault1").checked = true;
+        $('.form-switch label p').text("On");
+        $('.syntaxVariable1').addClass('syntaxBackground');
+        $('.syntaxThing').addClass('syntaxBackground1');
+    }
+    if (syntaxState == 'true') {
+        document.getElementById("flexSwitchCheckDefault1").checked = true;
+        $('.form-switch label p').text("On");
+        $('.syntaxVariable1').addClass('syntaxBackground');
+        $('.syntaxThing').addClass('syntaxBackground1');
+    }
+    if (syntaxState == 'false') {
+        document.getElementById("flexSwitchCheckDefault1").checked = false;
+        $('.form-switch label p').text("Off");
+        $('.syntaxVariable1').removeClass('syntaxBackground');
+        $('.syntaxThing').removeClass('syntaxBackground1');
+    }
     if (currentLayout === null) {
         localStorage.setItem("currentLayout", "rightside");
         document.getElementById("flexRadioDefault1").checked = true;
@@ -1447,25 +1824,45 @@
         $('.item p').css('justify-content', 'right');
         $('.item p').css('flex-direction', 'row-reverse');
     }
-    $("#flexRadioDefault1").click(function () {
-        localStorage.setItem("currentLayout", "rightside");
-        document.getElementById("content").style.flexDirection = "row";
-        document.getElementById("contentfield").style.borderRight = "none";
-        document.getElementById("contentfield").style.borderLeft = "1px solid #2c2c2c";
-        $('#flexRadioDefault1 + label p').css('color', '#4fffad');
-        $('#flexRadioDefault2 + label p').css('color', '#bdbdbd');
-        $('.item p').css('justify-content', 'left');
-        $('.item p').css('flex-direction', 'row');
-    });
-    $("#flexRadioDefault2").click(function () {
-        localStorage.setItem("currentLayout", "leftside");
-        document.getElementById("content").style.flexDirection = "row-reverse";
-        document.getElementById("contentfield").style.borderLeft = "none";
-        document.getElementById("contentfield").style.borderRight = "1px solid #2c2c2c";
-        $('#flexRadioDefault1 + label p').css('color', '#bdbdbd');
-        $('#flexRadioDefault2 + label p').css('color', '#4fffad');
-        $('.item p').css('justify-content', 'right');
-        $('.item p').css('flex-direction', 'row-reverse');
+    $(document).ready(function () {
+        $("#flexRadioDefault1").click(function () {
+            localStorage.setItem("currentLayout", "rightside");
+            document.getElementById("content").style.flexDirection = "row";
+            document.getElementById("contentfield").style.borderRight = "none";
+            document.getElementById("contentfield").style.borderLeft = "1px solid #2c2c2c";
+            $('#flexRadioDefault1 + label p').css('color', '#4fffad');
+            $('#flexRadioDefault2 + label p').css('color', '#bdbdbd');
+            $('.item p').css('justify-content', 'left');
+            $('.item p').css('flex-direction', 'row');
+        });
+        $("#flexRadioDefault2").click(function () {
+            localStorage.setItem("currentLayout", "leftside");
+            document.getElementById("content").style.flexDirection = "row-reverse";
+            document.getElementById("contentfield").style.borderLeft = "none";
+            document.getElementById("contentfield").style.borderRight = "1px solid #2c2c2c";
+            $('#flexRadioDefault1 + label p').css('color', '#bdbdbd');
+            $('#flexRadioDefault2 + label p').css('color', '#4fffad');
+            $('.item p').css('justify-content', 'right');
+            $('.item p').css('flex-direction', 'row-reverse');
+        });
+        $("#flexSwitchCheckDefault1").click(function () {
+            localStorage.setItem("syntaxState", !syntaxState);
+            syntaxState = !syntaxState;
+            if (syntaxState) {
+                document.getElementById("flexSwitchCheckDefault1").checked = true;
+                $('.form-switch label p').text("On");
+                $('.syntaxVariable1').addClass('syntaxBackground');
+                $('.syntaxThing').addClass('syntaxBackground1');
+                reactionString = "<span class='syntaxVariable1 syntaxBackground'>user</span>";
+            }
+            else {
+                document.getElementById("flexSwitchCheckDefault1").checked = false;
+                $('.form-switch label p').text("Off");
+                $('.syntaxVariable1').removeClass('syntaxBackground');
+                $('.syntaxThing').removeClass('syntaxBackground1');
+                reactionString = "user";
+            }
+        });
     });
     if (currentPage === null) {
         localStorage.setItem("currentPage", "Home");
