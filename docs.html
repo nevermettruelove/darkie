@@ -552,7 +552,7 @@
                     class="gobackbutton"><i class="fa-solid fa-house"></i></div>
             </a>
             <span class="versionspan" style="font-size: 18px;" data-bs-toggle="tooltip"
-                data-bs-custom-class="docversiontooltip" data-bs-title="Documentation Version"><a>1.6 <i
+                data-bs-custom-class="docversiontooltip" data-bs-title="Documentation Version"><a>1.61 <i
                         class="fa-brands fa-github"></i></a></span>
         </div>
     </nav>
@@ -1164,6 +1164,98 @@
                 <h3><i style="color: yellow;" class="fa-solid fa-star"></i> Release</h3>
                 <div class="accordion changelogaccordion" id="accordionExample">
                     <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFortySix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFortySix" aria-expanded="false"
+                                aria-controls="collapseFortySix">
+                                23.12.2023
+                            </button>
+                        </h2>
+                        <div id="collapseFortySix" class="accordion-collapse collapse" aria-labelledby="headingFortySix"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Added
+                                        <br>
+                                        <span>
+                                            Automod Commands (beta)
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFortyFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFortyFive" aria-expanded="false"
+                                aria-controls="collapseFortyFive">
+                                17.12.2023
+                            </button>
+                        </h2>
+                        <div id="collapseFortyFive" class="accordion-collapse collapse"
+                            aria-labelledby="headingFortyFive" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Changed
+                                        <br>
+                                        <span>
+                                            Automod Deleting Command
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFortyFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFortyFour" aria-expanded="false"
+                                aria-controls="collapseFortyFour">
+                                21.11.2023
+                            </button>
+                        </h2>
+                        <div id="collapseFortyFour" class="accordion-collapse collapse"
+                            aria-labelledby="headingFortyFour" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Fixed
+                                        <br>
+                                        <span>
+                                            Toggle Anti-Link Bugs
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFortyThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFortyThree" aria-expanded="false"
+                                aria-controls="collapseFortyThree">
+                                17.11.2023
+                            </button>
+                        </h2>
+                        <div id="collapseFortyThree" class="accordion-collapse collapse"
+                            aria-labelledby="headingFortyThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flexcontainer">
+                                    <div style="border-left: none;">
+                                        Added
+                                        <br>
+                                        <span>
+                                            Toggle for AFK System and Link System
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFortyTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFortyTwo" aria-expanded="false"
@@ -1271,17 +1363,17 @@
                                         <span>Global Reputation System</span>
                                     </div>
                                     <div>
-                                        Fixed
-                                        <br>
-                                        <span>Suggestion Channel System</span>
-                                    </div>
-                                    <div>
                                         Changed
                                         <br>
                                         <span>
                                             <code>user</code>, <code>server</code>, <code>xp</code>, <code>8ball</code>
                                             Output Design
                                         </span>
+                                    </div>
+                                    <div>
+                                        Fixed
+                                        <br>
+                                        <span>Suggestion Channel System</span>
                                     </div>
                                 </div>
                             </div>
@@ -1735,7 +1827,6 @@
         if (syntaxState == 'false') {
             reactionString = "user";
         }
-        console.log(reactionString);
         reactionElement.innerHTML = "/" + reactions[reaction] + " &lt;" + reactionString + "&gt;";
     }, 350);
     function checkSyntax(code) {
@@ -1756,27 +1847,49 @@
         }
     }
     for (const a of document.querySelectorAll(".flexcontainer div")) {
+        let header = a.parentNode.parentNode.parentNode.parentNode.firstElementChild.firstElementChild;
+        let headerText = header.textContent;
+        header.innerHTML = "<div class='vr'></div><span>" + headerText + "</span>";
+        let icon1 = document.createElement("i");
+        let icon2 = document.createElement("i");
+        let icon3 = document.createElement("i");
+        icon1.classList.add("fa-square-plus");
+        icon2.classList.add("fa-wrench");
+        icon3.classList.add("fa-wand-magic-sparkles");
+        icon1.classList.add("fa-solid");
+        icon2.classList.add("fa-solid");
+        icon3.classList.add("fa-solid");
         if (a.textContent.includes("Added")) {
-            const div = document.createElement('div');
-            div.innerHTML = `<i class="fa-solid fa-square-plus"></i>`;
+            let div = document.createElement('div');
+            div.innerHTML = '<i class="fa-solid fa-square-plus"></i>';
             div.style.borderLeft = "none";
             div.style.padding = "0.2rem 0.2rem 0.4rem 0.2rem";
             a.insertBefore(div, a.firstChild);
+            setTimeout(function () {
+                header.prepend(icon1);
+            }, 3);
         }
         if (a.textContent.includes("Fixed")) {
-            const div = document.createElement('div');
-            div.innerHTML = `<i class="fa-solid fa-wrench"></i>`;
+            let div = document.createElement('div');
+            div.innerHTML = '<i class="fa-solid fa-wrench"></i>';
             div.style.borderLeft = "none";
             div.style.padding = "0.2rem 0.2rem 0.4rem 0.2rem";
             a.insertBefore(div, a.firstChild);
+            setTimeout(function () {
+                header.prepend(icon2);
+            }, 1);
         }
         if (a.textContent.includes("Changed")) {
-            const div = document.createElement('div');
-            div.innerHTML = `<i class="fa-solid fa-wand-magic-sparkles"></i>`;
+            let div = document.createElement('div');
+            div.innerHTML = '<i class="fa-solid fa-wand-magic-sparkles"></i>';
             div.style.borderLeft = "none";
             div.style.padding = "0.2rem 0.2rem 0.4rem 0.2rem";
             a.insertBefore(div, a.firstChild);
+            setTimeout(function () {
+                header.prepend(icon3);
+            }, 2);
         }
+
     }
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
@@ -1953,12 +2066,6 @@
     function copy(text) {
         navigator.clipboard.writeText(text);
     }
-    // var input = document.querySelector('input');
-    // input.addEventListener('input', resizeInput);
-    // resizeInput.call(input);
-    // function resizeInput() {
-    //    this.style.width = this.value.length + "ch";
-    // }
 </script>
 
 </html>
