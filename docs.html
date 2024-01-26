@@ -66,6 +66,7 @@
         font-family: 'Lexend Deca', sans-serif;
         color: white;
         text-decoration: none;
+        text-wrap: nowrap;
     }
 
     h1 {
@@ -158,7 +159,8 @@
     .homecontent p,
     .commandcontent p,
     .settingscontent p,
-    .changelogcontent p {
+    .changelogcontent p,
+    .nojavascriptAlert p {
         color: #bdbdbd;
         font-weight: 300;
     }
@@ -574,6 +576,10 @@
         </div>
         <div class="contentfield" id="contentfield"
             style="flex: 4; border-left: 1px solid #2c2c2c; height: 100vh; background: #202020;">
+            <div class="nojavascriptAlert" style="display: flex; flex-direction: column; padding: 45px; padding-top: 20px;">
+                <h1 style="margin-top: 10px;">Javascript Disabled<br></h1>
+                <p>It is required to access the docs.</p>
+            </div>
             <div style="display: none;" class="homecontent">
                 <h1><i class="fa-solid fa-bars"></i> Home</h1>
                 <p>
@@ -1808,6 +1814,7 @@
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
 <script>
+    $('.nojavascriptAlert').css("display", "none");
     var syntaxElements = document.querySelectorAll("code");
     syntaxElements.forEach(checkSyntax);
     const reactions = ['kiss', 'punch', 'hug', 'slap', 'tickle', 'stare', 'happy', 'sad', 'cheers', 'bite', 'pat'];
