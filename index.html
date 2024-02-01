@@ -172,33 +172,40 @@
         .features-container {
             flex-direction: column;
         }
+
+        .card2 {
+            animation-delay: 0.1s;
+        }
+
+        .card3 {
+            animation-delay: 0.2s;
+        }
+
+        .card4 {
+            animation-delay: 0.3s;
+        }
+
+        .card5 {
+            animation-delay: 0.4s;
+        }
+
+        .card6 {
+            animation-delay: 0.5s;
+        }
     }
 
-        @media (min-width: 950px) {
-            .card {
-                width: 25vw;
-                margin: 4px;
-            }
-
-            .card-title {
-                font-size: 28px;
-            }
-
-            .card-text {
-                font-size: 22px;
-            }
-        }
-
+    @media (min-width: 950px) {
         .card {
-            opacity: 0;
-            overflow: hidden;
-            transition: opacity 0.2s, background-color 0.32s;
-            animation: opacityAnimation 0.2s forwards ease;
-            background-color: #272727;
+            width: 25vw;
+            margin: 4px;
         }
 
-        .card:hover {
-            background-color: rgba(255, 255, 255, 0.15);
+        .card-title {
+            font-size: 28px;
+        }
+
+        .card-text {
+            font-size: 22px;
         }
 
         .card4 {
@@ -220,55 +227,71 @@
         .card6 {
             animation-delay: 0.75s;
         }
+    }
 
-        .card-title,
-        .card-text {
-            width: fit-content;
-            transition: 0.2s;
-        }
+    .card {
+        opacity: 0;
+        overflow: hidden;
+        transition: opacity 0.2s, background-color 0.32s;
+        animation-name: opacityAnimation;
+        animation-duration: 0.2s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        background-color: #272727;
+    }
 
-        .card-title {
-            color: white;
-        }
+    .card:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+    }
 
-        .card-title i {
-            margin-right: 3px;
-        }
+    .card-title,
+    .card-text {
+        width: fit-content;
+        transition: 0.2s;
+    }
 
-        .custom-tooltip {
-            filter: drop-shadow(0px 0px 1px black);
-            font-family: 'Lexend Deca', sans-serif;
-            --bs-tooltip-opacity: 100%;
-            --bs-tooltip-color: #5865F2;
-        }
+    .card-title {
+        color: white;
+    }
 
-        footer {
-            position: fixed;
-            bottom: 0;
-            text-align: center;
-            background-color: #121212;
-            width: 100vw;
-        }
+    .card-title i {
+        margin-right: 3px;
+    }
 
-        footer a {
-            margin: 25px;
-            color: #505050;
-            text-decoration: none;
-        }
+    .custom-tooltip {
+        filter: drop-shadow(0px 0px 1px black);
+        font-family: 'Lexend Deca', sans-serif;
+        --bs-tooltip-opacity: 100%;
+        --bs-tooltip-color: #5865F2;
+    }
 
-        footer a i {
-            margin-right: 3px;
-        }
+    footer {
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+        background-color: #121212;
+        width: 100vw;
+    }
 
-        .botIcon {
-            height: 65px;
-        }
+    footer a {
+        margin: 25px;
+        color: #505050;
+        text-decoration: none;
+    }
 
-        .rainbowtext {
-            color: #ff3366;
-            animation: rainbowanimation 4.5s infinite;
-            font-weight: 400;
-        }
+    footer a i {
+        margin-right: 3px;
+    }
+
+    .botIcon {
+        height: 65px;
+    }
+
+    .rainbowtext {
+        color: #ff3366;
+        animation: rainbowanimation 4.5s infinite;
+        font-weight: 400;
+    }
 </style>
 
 <body>
