@@ -11,10 +11,8 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/ad4491eefa.js" crossorigin="anonymous"></script>
     <meta name="author" content="Darkie Bot" />
-    <link rel="icon" type="image/png"
-        href="ezkTm3I.png">
-    <meta property="og:image"
-        content="ezkTm3I.png">
+    <link rel="icon" type="image/png" href="ezkTm3I.png">
+    <meta property="og:image" content="ezkTm3I.png">
     <meta name="description"
         content="Discord bot that adds things such as moderating, anti-invite, 4fun, welcome messages & more!" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -297,8 +295,7 @@
 <body>
     <nav class="navbar bg-body-dark">
         <div class="container-fluid">
-            <img class="botIcon"
-                src="ezkTm3I.png" />
+            <img class="botIcon" src="ezkTm3I.png" />
             <div class="buttons">
                 <a
                     href="https://discord.com/api/oauth2/authorize?client_id=1055863936660025484&amp;permissions=8&amp;scope=bot%20applications.commands">
@@ -396,6 +393,45 @@
 <script>
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    const inConstruction = true;
+
+    if (inConstruction) {
+        $('body > *').css("filter", "blur(65px)");
+        $('body > *').css("pointer-events", "none");
+        const constructionElement = document.createElement("div");
+        constructionElement.style.cssText = `
+            text-align: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            z-index: 1;
+            width: fit-content;
+            height: fit-content;
+        `;
+        constructionElement.innerHTML = `
+        <div style="background: #3b3b3b; outline: 1px solid #606060; padding: 20px; border-radius: 20px;" class="constructionDiv">
+            <h1 style="display: flex; align-items: center; justify-content: center; padding-bottom: 15px; border-bottom: 1px solid #606060;"><i style="font-size: 45px;" class="fa-solid fa-bullhorn"></i>
+                <span style="margin-left: 15px;">Annoucement</span>
+            </h1>
+            <div style="display: flex; align-items: center; padding: 15px; flex-direction: column;">
+                <span style="width: 250px; margin-top: 5px;">
+                    <img style="width: 84px; height: 54px; border-radius: 6px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg/1920px-Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg.png">
+                    <p style='margin-bottom: 0; font-weight: 300;'>We are currently rebranding!<br>Check the website later!</p>
+                </span>
+                <span style="width: 250px; margin-top: 15px;">
+                    <img style="width: 84px; height: 54px; border-radius: 6px;" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/1920px-Flag_of_Poland.svg.png">
+                    <p style='margin-bottom: 0; font-weight: 300;'>Jesteśmy w trakcie rebrandingu!<br>Zobacz tą stronę później!</p>
+                </span>
+            </div>
+        </div>`
+        document.body.insertBefore(constructionElement, document.body.firstElementChild);
+    }
 </script>
 
 </html>
